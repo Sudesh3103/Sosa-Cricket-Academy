@@ -2,6 +2,7 @@ const Hero = () => {
   return (
     <section id="top" className="relative overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(255,216,0,0.16),_transparent_35%),linear-gradient(180deg,#07100c_0%,#06120d_60%)]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,193,7,0.16),_transparent_18%),radial-gradient(circle_at_center,_rgba(255,255,255,0.05),_transparent_30%)]" />
+      
       <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-6 py-20 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-2xl space-y-8">
           <p className="text-sm font-semibold uppercase tracking-[0.36em] text-amber-300">Train Hard. Dream Big.</p>
