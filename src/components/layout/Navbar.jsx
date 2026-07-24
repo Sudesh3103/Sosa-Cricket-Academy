@@ -64,7 +64,7 @@ const Navbar = () => {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="/facilities#ground"
+            href="/Ground"
             className="inline-flex items-center gap-2 rounded-full border border-white/16 bg-white/6 px-4 py-2.5 text-xs font-extrabold uppercase tracking-[0.16em] text-white transition hover:border-[#ffca28]/55"
           >
             Book Ground

@@ -1,6 +1,6 @@
 const Testimonials = ({ testimonials }) => {
   return (
-    <section className="mt-20 rounded-[2rem] border border-white/10 bg-[#0d1f16]/80 p-10 shadow-[0_30px_80px_rgba(0,0,0,0.16)] backdrop-blur-xl">
+    <section className="mt-20 rounded-/[2rem] border border-white/10 bg-[#0d1f16]/80 p-10 shadow-[0_30px_80px_rgba(0,0,0,0.16)] backdrop-blur-xl">
       <div className="mb-10 text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.36em] text-amber-300">Testimonials</p>
       </div>

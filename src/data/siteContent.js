@@ -29,7 +29,7 @@ export const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
   { label: 'Academy', path: '/academy' },
-  { label: 'Ground', path: '/facilities#ground' },
+  { label: 'Ground', path: '/ground' },
   { label: 'Facilities', path: '/facilities' },
   { label: 'Gallery', path: '/gallery' },
   { label: 'Contact', path: '/#contact' },

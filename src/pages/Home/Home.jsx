@@ -35,8 +35,10 @@ const Home = () => {
 
       <section className="border-y border-black/10 bg-white">
         <div className="mx-auto grid max-w-7xl gap-6 px-5 py-7 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+          
           {homePage.stats.map((stat) => (
             <div key={stat.label} className="flex items-center gap-4 rounded-[28px] border border-slate-200 bg-[#f8faf8] px-5 py-5 shadow-sm">
+              
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0d2c18] text-[#ffca28]">
                 <CalendarDays size={24} />
               </div>
