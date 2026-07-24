@@ -26,7 +26,7 @@ const TopBar = () => {
             <MapPin size={14} />
             {siteMeta.location}
           </span>
-          <div className="hidden items-center gap-2 sm:flex">
+          {/* <div className="hidden items-center gap-2 sm:flex">
             <span className="uppercase tracking-[0.18em] text-white/46">Follow Us</span>
             {socialLinks.map((item) => {
               const Icon = socialIcons[item.label]
@@ -49,7 +49,7 @@ const TopBar = () => {
             >
               <Mail size={14} />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

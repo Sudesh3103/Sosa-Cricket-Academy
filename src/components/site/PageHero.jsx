@@ -22,7 +22,7 @@ const PageHero = ({
     <section className={`relative overflow-hidden ${compact ? 'min-h-[420px]' : 'min-h-[620px]'}`}>
       <div className="absolute inset-0">
         <img src={backgroundImage} alt="" className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,10,7,0.96)_0%,rgba(4,10,7,0.8)_42%,rgba(4,10,7,0.36)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,10,7,0.9)_0%,rgba(4,10,7,0.5)_42%,rgba(4,10,7,0.2)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,202,40,0.24),transparent_25%),linear-gradient(180deg,transparent_45%,rgba(4,10,7,0.58)_100%)]" />
       </div>
 

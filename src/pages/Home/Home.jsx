@@ -1,11 +1,54 @@
 import { useMemo, useState } from 'react'
-import { ArrowRight, CalendarDays, Clock3, Mail, MapPin, Phone, Play, Quote, Send } from 'lucide-react'
+import {
+  Activity,
+  ArrowRight,
+  BarChart3,
+  Building2,
+  CalendarDays,
+  CircleDot,
+  Clock3,
+  Dumbbell,
+  Hand,
+  Mail,
+  MapPin,
+  MoveRight,
+  Phone,
+  Play,
+  Quote,
+  Send,
+  Target,
+  Trophy,
+  UserRound,
+  Users,
+} from 'lucide-react'
 import { Link } from 'react-router-dom'
 import CTASection from '../../components/site/CTASection'
+import CountUpStat from '../../components/site/CountUpStat'
 import PageHero from '../../components/site/PageHero'
 import SectionHeader from '../../components/site/SectionHeader'
 import SiteLayout from '../../components/site/SiteLayout'
 import { generatedAssets, homePage, sharedPrograms, siteMeta } from '../../data/siteContent'
+
+const statIcons = [CalendarDays, Users, Target, Building2]
+
+const reasonIcons = {
+  'Fitness First': Dumbbell,
+  'Professional Coaching': Users,
+  'Leather Ball Practice': CircleDot,
+  'Indoor Facility': Building2,
+  'Match Awareness': Target,
+  'Individual Attention': UserRound,
+}
+
+const methodologyIcons = {
+  warmup: Activity,
+  fitness: Dumbbell,
+  fielding: Hand,
+  batting: Target,
+  bowling: CircleDot,
+  match: Trophy,
+  analysis: BarChart3,
+}
 
 const Home = () => {
   const [activeFilter, setActiveFilter] = useState('All')
@@ -35,31 +78,51 @@ const Home = () => {
 
       <section className="border-y border-black/10 bg-white">
         <div className="mx-auto grid max-w-7xl gap-6 px-5 py-7 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
-          
-          {homePage.stats.map((stat) => (
+          {homePage.stats.map((stat, index) => {
+            const Icon = statIcons[index] ?? CalendarDays
+
+            return (
             <div key={stat.label} className="flex items-center gap-4 rounded-[28px] border border-slate-200 bg-[#f8faf8] px-5 py-5 shadow-sm">
-              
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0d2c18] text-[#ffca28]">
-                <CalendarDays size={24} />
+                <Icon size={24} />
               </div>
               <div>
-                <p className="text-3xl font-black text-[#102216]">{stat.value}</p>
+                <p className="text-3xl font-black text-[#102216]">
+                  <CountUpStat value={stat.value} />
+                </p>
                 <p className="text-sm font-bold uppercase tracking-[0.12em] text-[#102216]">{stat.label}</p>
                 <p className="text-sm text-slate-500">{stat.helper}</p>
               </div>
             </div>
-          ))}
+            )
+          })}
         </div>
       </section>
 
-      <section className="bg-[linear-gradient(180deg,#06210f_0%,#08150e_100%)]">
-        <div className="mx-auto grid max-w-7xl gap-px px-5 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-8">
-          {homePage.reasons.map((reason) => (
-            <div key={reason.title} className="border border-white/8 bg-white/[0.03] px-6 py-8">
-              <p className="text-lg font-black uppercase tracking-[0.02em] text-white">{reason.title}</p>
-              <p className="mt-3 text-sm leading-7 text-white/68">{reason.description}</p>
-            </div>
-          ))}
+      <section className="bg-[linear-gradient(180deg,#08200f_0%,#04100b_100%)]">
+        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-6 lg:px-8">
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-black uppercase tracking-[-0.03em] text-white sm:text-4xl">Why Choose SOSA?</h2>
+          </div>
+
+          <div className="grid border-y border-white/10 sm:grid-cols-2 lg:grid-cols-6">
+            {homePage.reasons.map((reason, index) => {
+              const Icon = reasonIcons[reason.title] ?? Target
+
+              return (
+                <div
+                  key={reason.title}
+                  className={`px-4 py-7 text-center ${index < homePage.reasons.length - 1 ? 'lg:border-r lg:border-white/10' : ''} ${index < 4 ? 'sm:border-b sm:border-white/10 lg:border-b-0' : ''}`}
+                >
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[#c59d2d]/50 bg-[#0d2c18] text-[#d9b03b]">
+                    <Icon size={22} strokeWidth={2.2} />
+                  </div>
+                  <p className="mt-4 text-sm font-black uppercase tracking-[0.08em] text-white">{reason.title}</p>
+                  <p className="mt-2 text-xs leading-6 text-white/68">{reason.description}</p>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </section>
 
@@ -182,23 +245,39 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-[linear-gradient(180deg,#092111_0%,#04100b_100%)] py-16">
+      <section className="bg-[linear-gradient(180deg,#0a2914_0%,#04100b_100%)] py-14">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-          <SectionHeader
-            eyebrow="Our Training Methodology"
-            title="Built for complete player development"
-            description="Every session moves in a structured flow so athletes improve technique, physical readiness and game understanding together."
-            align="center"
-            light
-          />
+          <div className="mb-9 text-center">
+            <div className="mx-auto mb-3 flex max-w-md items-center gap-4">
+              <span className="h-px flex-1 bg-[#b48922]/60" />
+              <p className="text-lg font-black uppercase tracking-[0.1em] text-white sm:text-2xl">Our Training Methodology</p>
+              <span className="h-px flex-1 bg-[#b48922]/60" />
+            </div>
+          </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-7">
-            {homePage.methodology.map((step) => (
-              <div key={step} className="rounded-[24px] border border-white/10 bg-white/5 px-4 py-6 text-center backdrop-blur-sm">
-                <div className="mx-auto mb-4 h-12 w-12 rounded-full bg-[#ffca28]/15" />
-                <p className="text-sm font-bold uppercase tracking-[0.12em] text-white">{step}</p>
-              </div>
-            ))}
+          <div className="grid gap-4 lg:grid-cols-[repeat(7,minmax(0,1fr))] lg:items-start">
+            {homePage.methodology.map((step, index) => {
+              const Icon = methodologyIcons[step.icon] ?? Activity
+
+              return (
+                <div key={step.title} className="relative">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/25 bg-[#08200f] text-white shadow-[0_8px_24px_rgba(0,0,0,0.24)]">
+                      <Icon size={26} strokeWidth={2.1} />
+                    </div>
+                    <p className="mt-4 text-sm font-black uppercase tracking-[0.08em] text-white">{step.title}</p>
+                    <p className="mt-1 text-xs leading-5 text-white/60">{step.subtitle}</p>
+                  </div>
+
+                  {index < homePage.methodology.length - 1 ? (
+                    <div className="absolute left-[calc(50%+2.5rem)] top-8 hidden w-[calc(100%-1rem)] items-center lg:flex">
+                      <span className="h-px flex-1 bg-white/18" />
+                      <MoveRight size={16} className="mx-2 text-white/55" />
+                    </div>
+                  ) : null}
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>

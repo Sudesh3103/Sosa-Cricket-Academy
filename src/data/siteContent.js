@@ -12,8 +12,20 @@ import students2Img from '../assets/images/home/Students2.jpeg'
 import washroomImg from '../assets/images/home/Washroom.jpeg'
 import yardImg from '../assets/images/home/Yard.jpeg'
 
+const HeroImg = (prompt, imageSize = 'landscape_16_9') =>
+  `src/assets/images/home/boyplay.png`
+
+const aboutHero = (prompt, imageSize = 'landscape_16_9') =>
+  `src/assets/images/home/Students.jpeg`
+
+const founderOne = (prompt, imageSize = 'landscape_16_9') =>
+  `src/assets/images/about/Coach1.jpeg`
+
+const founderTwo = (prompt, imageSize = 'landscape_16_9') =>
+  `src/assets/images/about/Coach2.jpeg`
+
 const generatedImage = (prompt, imageSize = 'landscape_16_9') =>
-  `https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=${encodeURIComponent(prompt)}&image_size=${imageSize}`
+  ``
 
 export const siteMeta = {
   phoneDisplay: '+91 12345 67890',
@@ -42,10 +54,10 @@ export const socialLinks = [
 ]
 
 export const generatedAssets = {
-  homeHero: generatedImage(
+  homeHero: HeroImg(
     'cinematic indian cricket batsman playing an explosive front foot shot under dramatic floodlights, stadium dust, golden sunset haze, premium sports campaign photography, realistic, ultra detailed',
   ),
-  aboutHero: generatedImage(
+  aboutHero: aboutHero(
     'luxury cricket academy pavilion beside a lush green cricket ground in coastal india, cinematic evening light, premium architecture photography, realistic, detailed sky',
   ),
   academyHero: generatedImage(
@@ -57,11 +69,11 @@ export const generatedAssets = {
   galleryHero: generatedImage(
     'professional indian batsman in full white cricket gear playing a shot inside an indoor practice arena, dramatic spotlight, premium sports photography, realistic',
   ),
-  founderOne: generatedImage(
+  founderOne: founderOne(
     'professional portrait of an indian sports academy founder in black shirt, confident pose, premium studio lighting, realistic, neutral background',
     'portrait_4_3',
   ),
-  founderTwo: generatedImage(
+  founderTwo: founderTwo(
     'professional portrait of an indian sports academy founder in white shirt, confident pose, premium studio lighting, realistic, neutral background',
     'portrait_4_3',
   ),
@@ -185,13 +197,13 @@ export const homePage = {
     action: { label: 'Know More About Us', href: '/about' },
   },
   methodology: [
-    'Dynamic Warm-up',
-    'Strength & Conditioning',
-    'Fielding Drills',
-    'Shadow Practice',
-    'Batting & Bowling',
-    'Match Awareness',
-    'Performance Review',
+    { title: 'Warm Up', subtitle: 'Mobility & activation', icon: 'warmup' },
+    { title: 'Fitness & Conditioning', subtitle: 'Strength and stamina', icon: 'fitness' },
+    { title: 'Fielding Drills', subtitle: 'Reaction and control', icon: 'fielding' },
+    { title: 'Batting Practice', subtitle: 'Technique and timing', icon: 'batting' },
+    { title: 'Bowling Drills', subtitle: 'Rhythm and accuracy', icon: 'bowling' },
+    { title: 'Match Practice', subtitle: 'Game scenario learning', icon: 'match' },
+    { title: 'Performance Analysis', subtitle: 'Track and improve', icon: 'analysis' },
   ],
   galleryPreview: {
     filters: ['All', 'Practice', 'Matches', 'Events'],

@@ -66,7 +66,7 @@ const About = () => {
           <div className="grid gap-5 sm:grid-cols-2">
             {aboutPage.founders.map((founder) => (
               <article key={founder.name} className="overflow-hidden rounded-[26px] border border-white/10 bg-white text-[#102216] shadow-2xl shadow-black/20">
-                <img src={founder.image} alt={founder.name} className="h-72 w-full object-cover" />
+                <img src={founder.image} alt={founder.name} className="h-72 w-full object-contain" />
                 <div className="px-5 py-5 text-center">
                   <p className="text-2xl font-black uppercase tracking-[-0.03em]">{founder.name}</p>
                   <p className="mt-2 text-sm font-bold uppercase tracking-[0.16em] text-slate-500">{founder.role}</p>
