@@ -1,6 +1,5 @@
 // src/data/contactData.js
-
- // Update the path as needed
+import contactBanner from "../assets/images/home/Ground.jpeg";
 
 export const contactHero = {
   eyebrow: "Contact Us",
@@ -8,6 +7,7 @@ export const contactHero = {
   subtitle: "HEAR FROM YOU",
   description:
     "Have a question about admissions, coaching, or ground bookings? Reach out to our team—we're always happy to help.",
+  background:contactBanner
  
 };
 
@@ -53,7 +53,7 @@ export const locationInfo = {
   landmark: "Near Nachane School & Behind Datta Mandir",
 
   // Replace with your academy's Google Maps Embed URL
-  map: "https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAP_EMBED_LINK",
+  map:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d61060.658546784915!2d73.2875051!3d16.9602227!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bea73cea56155cd%3A0xa55303765c724425!2sSawant%20Oasis%20Sports%20Arena%20%7C%20Top%20sport%20cricket%20ground%20%7C%20Sports%20ground%20near%20me%20%7C%20Best%20sport%20ground%20in%20ratnagiri%20%7C!5e0!3m2!1sen!2sin!4v1784987252862!5m2!1sen!2sin",
 };
 
 export const contactCTA = {

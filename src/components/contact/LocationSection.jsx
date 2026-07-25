@@ -6,11 +6,11 @@ const LocationSection = ({ location }) => {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-2">
         {/* Left Content */}
         <div>
-          <span className="text-primary font-semibold uppercase tracking-wider">
+          <span className="text-primary font-semibold uppercase tracking-wider  text-yellow-500">
             Our Location
           </span>
 
-          <h2 className="mt-2 text-4xl font-bold uppercase">
+          <h2 className="mt-2 text-4xl font-bold uppercase  text-black">
             Find Us Here
           </h2>
 
@@ -22,7 +22,7 @@ const LocationSection = ({ location }) => {
               </div>
 
               <div>
-                <h4 className="font-semibold">
+                <h4 className="font-semibold text-yellow-500">
                   {location.academy}
                 </h4>
 
@@ -37,7 +37,7 @@ const LocationSection = ({ location }) => {
             </div>
 
             {/* Easy to Reach */}
-            <div className="flex gap-4">
+            <div className="flex gap-4  text-yellow-500">
               <div className="mt-1 rounded-full bg-green-900 p-3 text-white">
                 <Navigation size={20} />
               </div>
@@ -54,7 +54,7 @@ const LocationSection = ({ location }) => {
             </div>
 
             {/* Landmark */}
-            <div className="flex gap-4">
+            <div className="flex gap-4  text-yellow-500">
               <div className="mt-1 rounded-full bg-green-900 p-3 text-white">
                 <Landmark size={20} />
               </div>
