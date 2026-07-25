@@ -5,6 +5,8 @@ import Academy from '../pages/Academy/Academy'
 import Facilities from '../pages/Facilities/Facilities'
 import Gallery from '../pages/Gallery/Gallery'
 import Ground from '../pages/Ground/Ground'
+import Contact from '../pages/Contact/Contact'
+
 
 const AppRoutes = () => {
   return (
@@ -15,7 +17,7 @@ const AppRoutes = () => {
       <Route path="/ground" element={< Ground/>} />
       <Route path="/facilities" element={<Facilities />} />
       <Route path="/gallery" element={<Gallery />} />
-      <Route path="*" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   )
 }
