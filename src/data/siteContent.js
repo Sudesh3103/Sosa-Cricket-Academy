@@ -32,7 +32,7 @@ export const navLinks = [
   { label: 'Ground', path: '/ground' },
   { label: 'Facilities', path: '/facilities' },
   { label: 'Gallery', path: '/gallery' },
-  { label: 'Contact', path: '/#contact' },
+  { label: 'Contact', path: '/contact' },
 ]
 
 export const socialLinks = [

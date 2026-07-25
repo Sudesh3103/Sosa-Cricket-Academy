@@ -1,3 +1,8 @@
+
+import Ground2 from "../assets/images/home/Ground.jpeg"
+import Pavilion from "../assets/images/home/Pavilion.jpeg"
+import Nets from "../assets/images/home/Nets.png"
+import Academy2 from "../assets/images/home/Academy2.png"
 // Ground Hero
 export const groundHero = {
   eyebrow: "SOOSA Cricket Academy",
@@ -75,20 +80,17 @@ export const groundGallery = [
   {
     title: "Main Ground",
     category: "Ground",
-    image:
-      "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1200&q=80",
+    image:Ground2,
   },
   {
     title: "Pavilion",
     category: "Pavilion",
-    image:
-      "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80",
+    image:Pavilion,
   },
   {
     title: "Practice Nets",
     category: "Practice Nets",
-    image:
-      "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=80",
+    image:Nets,
   },
   {
     title: "Floodlights",
@@ -104,9 +106,8 @@ export const groundGallery = [
   },
   {
     title: "Academy View",
-    category: "Facilities",
-    image:
-      "https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&w=1200&q=80",
+    category: "Academy View",
+    image:Academy2,
   },
 ];
 
