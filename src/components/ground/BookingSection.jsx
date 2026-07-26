@@ -23,7 +23,7 @@ const BookingSection = ({ booking }) => {
             </p>
 
             <button className="mt-10 rounded-xl bg-[#0d2c18] px-8 py-4 font-bold uppercase text-white transition hover:bg-[#123d22]">
-              Book Now
+             <a href="/contact">Book Now</a> 
             </button>
 
           </div>

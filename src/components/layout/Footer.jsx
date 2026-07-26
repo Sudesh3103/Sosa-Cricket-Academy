@@ -1,12 +1,17 @@
-import { Camera, Globe, Mail, MapPin, Phone, Play } from 'lucide-react'
+import {  Mail, MapPin, Phone,  } from 'lucide-react'
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 import { Link } from 'react-router-dom'
 import BrandLogo from '../site/BrandLogo'
 import { footerLinks, siteMeta, socialLinks } from '../../data/siteContent'
 
 const socialIcons = {
-  Facebook: Globe,
-  Instagram: Camera,
-  YouTube: Play,
+  Facebook: FaFacebookF,
+  Instagram: FaInstagram,
+  YouTube: FaYoutube,
 }
 
 const Footer = () => {

@@ -7,7 +7,7 @@ const AmenitiesSection = ({ amenities }) => {
 
         <SectionHeader
           eyebrow="PREMIUM AMENITIES"
-          title="Comfort Beyond The Game"
+          title2="Comfort Beyond The Game"
           description="Our ground is equipped with everything players, coaches, and visitors need for a comfortable cricket experience."
           theme="dark"
         />
@@ -48,16 +48,16 @@ const AmenitiesSection = ({ amenities }) => {
           <div className="grid gap-6 text-center md:grid-cols-4">
 
             <div>
-              <h2 className="text-4xl font-black text-[#ffca28]">6+</h2>
+              <h2 className="text-4xl font-black text-[#ffca28]">6</h2>
               <p className="mt-2 text-sm uppercase tracking-widest text-gray-300">
                 Practice Nets
               </p>
             </div>
 
             <div>
-              <h2 className="text-4xl font-black text-[#ffca28]">2</h2>
+              <h2 className="text-4xl font-black text-[#ffca28]">9</h2>
               <p className="mt-2 text-sm uppercase tracking-widest text-gray-300">
-                Turf Wickets
+                Cricket Pitches
               </p>
             </div>
 
