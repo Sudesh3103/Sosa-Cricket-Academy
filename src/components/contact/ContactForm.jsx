@@ -36,7 +36,7 @@ const ContactForm = () => {
 
         {/* Subject */}
         <select
-          className="w-full rounded-lg border border-gray-200 px-5 py-4 outline-none focus:border-primary"
+          className="w-full rounded-lg border border-gray-200 px-5 py-4 outline-none focus:border-primary bg-[#06110D] text-white"
         >
           <option>Select Subject</option>
           <option>Admissions</option>

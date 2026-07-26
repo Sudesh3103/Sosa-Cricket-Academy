@@ -350,14 +350,13 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-5 py-18 sm:px-6 lg:px-8">
+      <div >
         <CTASection
           title="Ready to become"
           accent="the next champion?"
           primaryAction={{ label: 'Enroll Now', href: '/academy#programs' }}
           secondaryAction={{ label: 'Book Ground', href: '/facilities#ground' }}
-          leftImage={generatedAssets.ctaBatsman}
-          rightImage={generatedAssets.ctaTeam}
+          backgroundImage={generatedAssets.ctaBackground}
         />
       </div>
 

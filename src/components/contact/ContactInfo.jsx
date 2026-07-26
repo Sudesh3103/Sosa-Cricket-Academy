@@ -16,7 +16,7 @@ const iconMap = {
 const ContactInfo = ({ contactInfo, officeHours }) => {
   return (
     <div>
-      <span className="text-primary font-semibold uppercase tracking-wider">
+      <span className="text-[#ffca28] font-semibold uppercase tracking-wider">
         We're Here For You
       </span>
 
@@ -24,7 +24,7 @@ const ContactInfo = ({ contactInfo, officeHours }) => {
         Let's Connect
       </h2>
 
-      <p className="mt-5 text-gray-600 leading-7">
+      <p className="mt-5 text-white-600 leading-7">
         Whether you're a parent, player, or cricket enthusiast,
         feel free to contact us for admissions, ground bookings,
         partnerships, or any other queries.
@@ -48,7 +48,9 @@ const ContactInfo = ({ contactInfo, officeHours }) => {
                   {item.title}
                 </h4>
 
-                <p className="font-medium">{item.value}</p>
+                <p className="font-medium text-green-700">
+                  {item.value}
+                </p>
 
                 <p className="text-sm text-gray-500">
                   {item.subtitle}

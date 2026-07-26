@@ -5,37 +5,32 @@ import CTASection from "../../components/site/CTASection";
 import ContactSection from "../../components/contact/ContactSection";
 import LocationSection from "../../components/contact/LocationSection";
 
-import {
-  contactHero,
-  contactInfo,
-  officeHours,
-  locationInfo,
-  contactCTA,
-} from "../../data/contactData";
+import { contactPage, generatedAssets } from "../../data/siteContent";
 
 const Contact = () => {
   return (
     <SiteLayout>
       <PageHero
-        eyebrow={contactHero.eyebrow}
-        title={contactHero.title}
-        subtitle={contactHero.subtitle}
-        description={contactHero.description}
-        backgroundImage={contactHero.backgroundImage}
+        eyebrow={contactPage.hero.eyebrow}
+        title={contactPage.hero.title}
+        subtitle={contactPage.hero.subtitle}
+        description={contactPage.hero.description}
+        backgroundImage={contactPage.hero.backgroundImage}
       />
 
       <ContactSection
-        contactInfo={contactInfo}
-        officeHours={officeHours}
+        contactInfo={contactPage.contactInfo}
+        officeHours={contactPage.officeHours}
       />
 
-      <LocationSection location={locationInfo} />
+      <LocationSection location={contactPage.locationInfo} />
 
-      <div className="max-w-7xl mx-auto px-5 py-20">
+      <div >
         <CTASection
-          title={contactCTA.title}
-          accent={contactCTA.accent}
-          description={contactCTA.subtitle}
+          title={contactPage.cta.title}
+          accent={contactPage.cta.accent}
+          description={contactPage.cta.subtitle}
+          backgroundImage={generatedAssets.ctaBackground}
           primaryAction={{
             label: "Enroll Now",
             href: "/admissions",

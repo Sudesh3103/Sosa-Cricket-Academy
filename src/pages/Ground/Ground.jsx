@@ -1,6 +1,7 @@
 import SiteLayout from "../../components/site/SiteLayout";
 import PageHero from "../../components/site/PageHero";
 import CTASection from "../../components/site/CTASection";
+import { generatedAssets } from "../../data/siteContent";
 
 import {
   groundHero,
@@ -50,11 +51,12 @@ const Ground = () => {
       <BookingSection booking={bookingInfo} />
 
       {/* CTA */}
-      <div className="mx-auto max-w-7xl px-5 py-20">
+      <div >
         <CTASection
           title={groundCTA.title}
           accent="Book Your Slot Today"
           description={groundCTA.subtitle}
+          backgroundImage={generatedAssets.ctaBackground}
           primaryAction={{
             label: "Book Ground",
             href: "/contact",

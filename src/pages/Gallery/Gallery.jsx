@@ -76,14 +76,13 @@ const Gallery = () => {
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-5 py-18 sm:px-6 lg:px-8">
+      <div >
         <CTASection
           title="Be a part of our journey"
           accent="Create your own memories"
           primaryAction={{ label: 'Join the Academy', href: '/academy#programs' }}
           secondaryAction={{ label: 'Book the Ground', href: '/facilities#ground' }}
-          leftImage={generatedAssets.ctaBatsman}
-          rightImage={generatedAssets.ctaTeam}
+          backgroundImage={generatedAssets.ctaBackground}
         />
       </div>
     </SiteLayout>
