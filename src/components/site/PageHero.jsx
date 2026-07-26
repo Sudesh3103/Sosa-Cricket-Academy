@@ -19,14 +19,14 @@ const PageHero = ({
   compact = false,
 }) => {
   return (
-    <section className={`relative overflow-hidden ${compact ? 'min-h-[420px]' : 'min-h-[620px]'}`}>
+    <section className={`relative overflow-hidden ${compact ? 'min-h-105' : 'min-h-155'}`}>
       <div className="absolute inset-0">
         <img src={backgroundImage} alt="" className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,10,7,0.9)_0%,rgba(4,10,7,0.5)_42%,rgba(4,10,7,0.2)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,202,40,0.24),transparent_25%),linear-gradient(180deg,transparent_45%,rgba(4,10,7,0.58)_100%)]" />
       </div>
 
-      <div className="relative mx-auto flex max-w-7xl px-5 py-20 sm:px-6 lg:min-h-[620px] lg:items-center lg:px-8">
+      <div className="relative mx-auto flex max-w-7xl px-5 py-20 sm:px-6 lg:min-h-155 lg:items-center lg:px-8">
         <div className="grid w-full gap-10 lg:grid-cols-[minmax(0,1.25fr)_360px] lg:items-end">
           <div className="space-y-8 pt-10 lg:pt-16">
             {eyebrow ? (
@@ -38,7 +38,7 @@ const PageHero = ({
 
             <div className="space-y-4">
               {subtitle ? <p className="text-xl font-black uppercase text-[#ffca28] sm:text-2xl">{subtitle}</p> : null}
-              <h1 className="max-w-4xl text-5xl font-black uppercase tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-4xl text-5xl font-black uppercase tracking-tighter text-white sm:text-6xl lg:text-7xl">
                 {title}
               </h1>
               <p className="max-w-2xl text-base leading-8 text-white/78 sm:text-lg">{description}</p>
