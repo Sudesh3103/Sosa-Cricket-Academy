@@ -25,7 +25,7 @@ const FeatureSection = ({ features }) => {
             <button
               className="mt-10 rounded-xl bg-[#0d2c18] px-8 py-4 font-bold uppercase tracking-wide text-white transition-all duration-300 hover:bg-[#123d22] hover:scale-105"
             >
-              Book The Ground →
+             <a href="/contact">Book The Ground →</a> 
             </button>
 
           </div>

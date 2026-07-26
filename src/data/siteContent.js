@@ -28,9 +28,9 @@ const generatedImage = (prompt, imageSize = 'landscape_16_9') =>
   ``
 
 export const siteMeta = {
-  phoneDisplay: '+91 12345 67890',
+  phoneDisplay: '+91 9673373093',
   phoneLink: '+911234567890',
-  whatsappLink: '911234567890',
+  whatsappLink: '+91 9673373093',
   email: 'info@sosacricketacademy.com',
   location: 'Ratnagiri',
   fullAddress: 'SOSA Cricket Academy, Nachane, Ratnagiri - 415639, Maharashtra',
@@ -48,9 +48,9 @@ export const navLinks = [
 ]
 
 export const socialLinks = [
-  { label: 'Facebook', href: '#' },
-  { label: 'Instagram', href: '#' },
-  { label: 'YouTube', href: '#' },
+  { label: 'Facebook', href: 'https://www.facebook.com/share/1D7VNycuX9/' },
+  { label: 'Instagram', href: 'https://www.instagram.com/sawant_oasis_sports_arena?igsh=anl0M2s2emxlazFu' },
+  { label: 'YouTube', href: 'https://www.youtube.com/@sawantoasissportsarena3377' },
 ]
 
 export const generatedAssets = {

@@ -42,7 +42,7 @@ const HeroSection = () => {
             <div className="mt-5 h-1 w-20 bg-[#ffca28]" />
 
             <p className="mt-8 text-lg leading-8 text-gray-300">
-              Every inch of the SOOSA Cricket Ground has been designed to
+              Every inch of the SOSA Cricket Ground has been designed to
               provide professional training and tournament experience.
               Whether you're preparing for district-level matches or daily
               practice, our facilities deliver the perfect environment.
