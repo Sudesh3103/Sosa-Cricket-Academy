@@ -1,25 +1,27 @@
 
 import Ground2 from "../assets/images/home/Ground.jpeg"
-import Pavilion from "../assets/images/home/Pavilion.jpeg"
+import Pavilion from "../assets/images/home/Pavilion2.png"
 import Nets from "../assets/images/home/Nets.png"
 import Academy2 from "../assets/images/home/Academy2.png"
+import Comfort2 from "../assets/images/home/Comfort2.png"
+import GreenTurf from "../assets/images/home/Turf.png"
+import backgroundImage from "../assets/images/home/Ground3.png"
 // Ground Hero
 export const groundHero = {
-  eyebrow: "SOOSA Cricket Academy",
+  eyebrow: "SOSA Cricket Academy",
   title: "A Ground Built for Greatness",
   subtitle: "Professional Cricket Ground",
   description:
-    "World-class playing surface, professional infrastructure and the perfect environment to train, practice and compete.",
-  backgroundImage:
-    "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1800&q=80",
+    "World-Class Playing Leather Cricket Ground for Tournaments and Practice Sessions",
+  backgroundImage:backgroundImage,
 };
 
 // Features
 export const groundFeatures = [
   {
-    title: "Turf Wicket",
+    title: "Cricket Pitches",
     description:
-      "High-quality turf wicket for consistent bounce and pace.",
+      "High-quality Cricket Pitches for consistent bounce and pace.",
     icon: "🏏",
   },
   {
@@ -95,14 +97,12 @@ export const groundGallery = [
   {
     title: "Floodlights",
     category: "Facilities",
-    image:
-      "https://images.unsplash.com/photo-1508098682722-e99c643e7485?auto=format&fit=crop&w=1200&q=80",
+    image:Comfort2,
   },
   {
-    title: "Night Match",
-    category: "Ground",
-    image:
-      "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1200&q=80",
+    title: "Natural Green Turf",
+    category: "Turf",
+    image:GreenTurf,
   },
   {
     title: "Academy View",
@@ -122,8 +122,8 @@ export const groundStats = [
     label: "Practice Nets",
   },
   {
-    value: "2",
-    label: "Turf Wickets",
+    value: "9",
+    label: "Cricket Pitches",
   },
   {
     value: "200+",

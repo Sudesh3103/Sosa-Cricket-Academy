@@ -78,7 +78,7 @@ const GallerySection = ({ gallery }) => {
                   </h3>
 
                   <p className="mt-2 text-gray-300">
-                    SOOSA Cricket Academy
+                    SOSA Cricket Academy
                   </p>
 
                 </div>
