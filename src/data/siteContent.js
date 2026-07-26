@@ -11,30 +11,35 @@ import studentsImg from '../assets/images/home/Students.jpeg'
 import students2Img from '../assets/images/home/Students2.jpeg'
 import washroomImg from '../assets/images/home/Washroom.jpeg'
 import yardImg from '../assets/images/home/Yard.jpeg'
+import boyplayImg from '../assets/images/home/boyplay.png'
+import Academy2Img from '../assets/images/home/Academy2.png'
+import NetsImg from '../assets/images/home/Nets.png'
+import Coach1Img from '../assets/images/about/Coach1.jpeg'
+import Coach2Img from '../assets/images/about/Coach2.jpeg'
 
 const HeroImg = (prompt, imageSize = 'landscape_16_9') =>
-  `src/assets/images/home/boyplay.png`
+  boyplayImg
 
 const aboutHero = (prompt, imageSize = 'landscape_16_9') =>
-  `src/assets/images/home/Students.jpeg`
+  studentsImg
 
 const academyHero = (prompt, imageSize = 'landscape_16_9') =>
-  `src/assets/images/home/Academy2.png`
+  Academy2Img
 
 const facilitiesHero = (prompt, imageSize = 'landscape_16_9') =>
-  `src/assets/images/home/Nets.png`
+  NetsImg
 
 const galleryHero = (prompt, imageSize = 'landscape_16_9') =>
-  `src/assets/images/home/Students2.jpeg`
+  students2Img
 
 const contactHero = (prompt, imageSize = 'landscape_16_9') =>
-  `src/assets/images/home/ground.jpeg`
+  groundImg
 
 const founderOne = (prompt, imageSize = 'landscape_16_9') =>
-  `src/assets/images/about/Coach1.jpeg`
+  Coach1Img
 
 const founderTwo = (prompt, imageSize = 'landscape_16_9') =>
-  `src/assets/images/about/Coach2.jpeg`
+  Coach2Img
 
 const generatedImage = (prompt, imageSize = 'landscape_16_9') =>
   ``
