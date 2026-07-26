@@ -194,7 +194,7 @@ const Home = () => {
                   <p className="text-sm leading-7 text-slate-600">{program.note}</p>
                   <a
                     href="/#contact"
-                    className={`inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-extrabold uppercase tracking-[0.16em] transition ${program.featured ? 'bg-[#102216] text-white hover:bg-[#19321f]' : 'bg-[#0d2c18] text-white hover:bg-[#153b23]'}`}
+                    className={`inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-extrabold uppercase tracking-[0.16em] transition ${program.featured ? 'bg-[#cde0d4] text-white hover:bg-[#19321f]' : 'bg-[#0d2c18] text-white hover:bg-[#153b23]'}`}
                   >
                     {program.button}
                     <ArrowRight size={16} />
@@ -363,7 +363,7 @@ const Home = () => {
 
       <section id="contact" className="bg-white pb-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-          <div className="grid gap-6 xl:grid-cols-[0.85fr_1fr_1fr]">
+          <div className="grid gap-6 xl:grid-cols-[1fr_1fr]">
             <div className="rounded-[32px] bg-[#f3f5f1] p-6">
               <SectionHeader eyebrow={homePage.contact.title} title="Let us help you choose the right path" description={homePage.contact.text} />
               <div className="mt-8 space-y-4">
@@ -420,9 +420,9 @@ const Home = () => {
               </form>
             </div>
 
-            <div className="overflow-hidden rounded-[32px] border border-[#e7ece7] bg-white shadow-sm">
+            {/* <div className="overflow-hidden rounded-[32px] border border-[#e7ece7] bg-white shadow-sm">
               <img src={homePage.contact.mapImage} alt="SOSA Cricket Academy location map placeholder" className="h-full min-h-[420px] w-full object-cover" />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

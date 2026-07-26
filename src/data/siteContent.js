@@ -18,6 +18,18 @@ const HeroImg = (prompt, imageSize = 'landscape_16_9') =>
 const aboutHero = (prompt, imageSize = 'landscape_16_9') =>
   `src/assets/images/home/Students.jpeg`
 
+const academyHero = (prompt, imageSize = 'landscape_16_9') =>
+  `src/assets/images/home/Academy2.png`
+
+const facilitiesHero = (prompt, imageSize = 'landscape_16_9') =>
+  `src/assets/images/home/Nets.png`
+
+const galleryHero = (prompt, imageSize = 'landscape_16_9') =>
+  `src/assets/images/home/Students2.jpeg`
+
+const contactHero = (prompt, imageSize = 'landscape_16_9') =>
+  `src/assets/images/home/ground.jpeg`
+
 const founderOne = (prompt, imageSize = 'landscape_16_9') =>
   `src/assets/images/about/Coach1.jpeg`
 
@@ -60,14 +72,17 @@ export const generatedAssets = {
   aboutHero: aboutHero(
     'luxury cricket academy pavilion beside a lush green cricket ground in coastal india, cinematic evening light, premium architecture photography, realistic, detailed sky',
   ),
-  academyHero: generatedImage(
+  academyHero: academyHero(
     'young indian cricketer practicing batting inside an elite indoor cricket academy net facility, dramatic green lights, premium sports editorial photography, realistic',
   ),
-  facilitiesHero: generatedImage(
+  facilitiesHero: facilitiesHero(
     'modern cricket academy building illuminated by stadium floodlights at night, lush outfield, premium sports venue photography, realistic, cinematic',
   ),
-  galleryHero: generatedImage(
+  galleryHero: galleryHero(
     'professional indian batsman in full white cricket gear playing a shot inside an indoor practice arena, dramatic spotlight, premium sports photography, realistic',
+  ), 
+  contactHero: contactHero(
+    'aerial view of a professional cricket ground in ratnagiri, india, with lush green outfield and pavilion, premium drone photography, realistic',
   ),
   founderOne: founderOne(
     'professional portrait of an indian sports academy founder in black shirt, confident pose, premium studio lighting, realistic, neutral background',
