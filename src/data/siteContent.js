@@ -165,8 +165,9 @@ export const homePage = {
       'World-class cricket coaching in Ratnagiri with focused training, fitness-first development and year-round indoor practice.',
     backgroundImage: generatedAssets.homeHero,
     actions: [
-      { label: 'Join Academy', href: '/academy#programs', variant: 'primary' },
-      { label: 'Book Ground', href: '/facilities#ground', variant: 'secondary' },
+      { label: 'Book Ground', href: '/contact', variant: 'secondary' },
+      { label: 'Join Academy', href: '/contact', variant: 'primary' },
+      
     ],
     highlightStats: [
       { value: '150+', label: 'Booking Days' },

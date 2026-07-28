@@ -146,12 +146,8 @@ const Home = () => {
 
       <section id="about" className="bg-[#f3f5f1] py-18 sm:py-22">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:px-8">
-          <div className="relative overflow-hidden rounded-[32px] shadow-[0_28px_80px_rgba(8,21,14,0.12)]">
-            <img
-              src={homePage.aboutPreview.image}
-              alt="SOSA cricket ground aerial view"
-              className="h-full min-h-[340px] w-full object-cover"
-            />
+          <div className="relative overflow-hidden rounded-/[32px] shadow-[0_28px_80px_rgba(8,21,14,0.12)]">
+            <img src={homePage.aboutPreview.image} alt="SOSA cricket ground aerial view" className="h-full min-h-[340px] w-full object-cover" />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_30%,rgba(4,10,7,0.74)_100%)]" />
             <button
               type="button"

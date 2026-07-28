@@ -38,7 +38,7 @@ const aboutData = {
   },
   vision: {
     title: 'One Dream. One Nation.',
-    statement: 'To nurture sportspersons from Ratnagiri who can represent India with pride.',
+    statement: 'To nurture sports persons from Ratnagiri who can represent India with pride.',
     body: 'We strongly believe that building successful athletes begins with educating not only children but also their parents. A supportive and informed family plays a vital role in a child’s sporting journey.',
   },
   cta: {
