@@ -394,7 +394,7 @@ const Home = () => {
               </div>
               <Link
                 to="/gallery"
-                className="inline-flex items-center gap-2 text-sm font-extrabold uppercase tracking-[0.16em] text-[#0d2c18]"
+                className="inline-flex items-center gap-2 rounded-full border border-[#0d2c18]/14 bg-[#0d2c18] px-5 py-3 text-sm font-extrabold uppercase tracking-[0.16em] text-white transition hover:bg-[#153b23]"
               >
                 View Full Gallery
                 <ArrowRight size={16} />
@@ -417,7 +417,7 @@ const Home = () => {
                   </span>
                 </div>
 
-                <div className="grid gap-6 grid-cols-1 lg:grid-cols-2">
+                <div className="grid gap-6 grid-cols-2 lg:grid-cols-1">
                   <div className="rounded-[28px] border border-[#e7ece7] bg-[#f8faf8] p-6">
                     <Quote className="text-[#c59d2d]" size={36} />
                     <p className="mt-6 text-base leading-8 text-slate-600">
@@ -438,30 +438,7 @@ const Home = () => {
                     </div>
                   </div>
 
-                  <div className="rounded-[28px] border border-[#e7ece7] bg-[#f8faf8] p-6">
-                    <p className="text-sm font-extrabold uppercase tracking-[0.24em] text-[#c59d2d]">
-                      Upcoming Events
-                    </p>
-                    <div className="mt-6 space-y-4">
-                      {homePage.events.map((event) => (
-                        <article
-                          key={event.title}
-                          className="rounded-[24px] border border-[#e6ece7] bg-white px-5 py-5 shadow-sm"
-                        >
-                          <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-[#102216]">
-                            {event.title}
-                          </p>
-                          <p className="mt-3 flex items-center gap-2 text-sm text-slate-500">
-                            <CalendarDays size={15} className="text-[#c59d2d]" />
-                            {event.date}
-                          </p>
-                          <p className="mt-2 text-sm font-semibold text-[#0d2c18]">
-                            {event.note}
-                          </p>
-                        </article>
-                      ))}
-                    </div>
-                  </div>
+                 
                 </div>
               </div>
             </div>

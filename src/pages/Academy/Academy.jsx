@@ -45,7 +45,7 @@ const Academy = () => {
                   </div>
                   <a
                     href="/#contact"
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0d2c18] px-5 py-3 text-sm font-extrabold uppercase tracking-[0.16em] text-white transition hover:bg-[#153b23]"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 bg-[#ffffff] px-5 py-3 text-sm font-extrabold uppercase tracking-[0.16em] text-white transition hover:bg-[#153b23]"
                   >
                     {program.button}
                     <ArrowRight size={16} />
