@@ -18,10 +18,16 @@ const PageHero = ({
   sideFacts = [],
   compact = false,
 }) => {
+  const isVideoBackground = typeof backgroundImage === 'string' && /\.(mp4|webm|ogg)$/i.test(backgroundImage)
+
   return (
     <section className={`relative overflow-hidden ${compact ? 'min-h-105' : 'min-h-155'}`}>
       <div className="absolute inset-0">
-        <img src={backgroundImage} alt="" className="h-full w-full object-cover" />
+        {isVideoBackground ? (
+          <video src={backgroundImage} autoPlay muted loop playsInline className="h-full w-full object-cover" />
+        ) : (
+          <img src={backgroundImage} alt="" className="h-full w-full object-cover" />
+        )}
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,10,7,0.9)_0%,rgba(4,10,7,0.5)_42%,rgba(4,10,7,0.2)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,202,40,0.24),transparent_25%),linear-gradient(180deg,transparent_45%,rgba(4,10,7,0.58)_100%)]" />
       </div>
