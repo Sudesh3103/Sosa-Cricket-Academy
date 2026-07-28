@@ -13,11 +13,11 @@ const Hero = () => {
             World-class cricket coaching in Ratnagiri, building champions on & off the field with expert guidance, match-ready training and a performance-first culture.
           </p>
           <div className="flex flex-wrap items-center gap-4">
-            <a href="#programs" className="rounded-full bg-amber-400 px-7 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-300">
-              Join Academy
-            </a>
             <a href="#contact" className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3 text-sm font-semibold text-white transition hover:border-amber-300 hover:text-amber-300">
               Book Ground
+            </a>
+            <a href="#programs" className="rounded-full bg-amber-400 px-7 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-300">
+              Join Academy
             </a>
           </div>
         </div>

@@ -17,9 +17,10 @@ import NetsImg from '../assets/images/home/Nets.png'
 import Coach1Img from '../assets/images/about/Coach1.jpeg'
 import Coach2Img from '../assets/images/about/Coach2.jpeg'
 import CTA from '../assets/images/home/CTA.png'
+import Ground from '../assets/videos/Ground.mp4'
 
 const HeroImg = (prompt, imageSize = 'landscape_16_9') =>
-  boyplayImg
+  Ground
 
 const aboutHero = (prompt, imageSize = 'landscape_16_9') =>
   studentsImg
@@ -46,16 +47,16 @@ const CTAimg = (prompt, imageSize = 'landscape_16_9') =>
   CTA
 
 const generatedImage = (prompt, imageSize = 'landscape_16_9') =>
-  ``
+  facilitiesImg
 
 export const siteMeta = {
   phoneDisplay: '+91 9673373093',
-  phoneLink: '+911234567890',
+  phoneLink: '+919673373093',
   whatsappLink: '+91 9673373093',
   email: 'info@sosacricketacademy.com',
   location: 'Ratnagiri',
   fullAddress: 'SOSA Cricket Academy, Nachane, Ratnagiri - 415639, Maharashtra',
-  admissionsText: 'Admissions Open 2026 | Limited Seats | Enrol Now',
+  admissionsText: 'Admissions Open 2026 | Limited Seats | Enroll Now',
 }
 
 export const navLinks = [
@@ -101,30 +102,12 @@ export const generatedAssets = {
     'professional portrait of an indian sports academy founder in white shirt, confident pose, premium studio lighting, realistic, neutral background',
     'portrait_4_3',
   ),
-  food: generatedImage(
-    'healthy indian sports meal tray with balanced nutrition, premium food photography, realistic',
-    'landscape_4_3',
-  ),
-  gym: generatedImage(
-    'modern high end functional training gym for athletes, dark interiors, dramatic lights, premium interior photography, realistic',
-    'landscape_4_3',
-  ),
-  firstAid: generatedImage(
-    'professional red first aid sports emergency kit on dark studio background, premium product photography, realistic',
-    'landscape_4_3',
-  ),
-  trophyWall: generatedImage(
-    'row of golden cricket trophies on a dark green stage, premium event photography, realistic, dramatic highlights',
-    'landscape_4_3',
-  ),
-  teamHuddle: generatedImage(
-    'youth cricket academy team huddle outdoors, emotional team spirit, premium sports documentary photography, realistic',
-    'landscape_4_3',
-  ),
-  mapCard: generatedImage(
-    'clean top down city map with highlighted location pin for cricket academy in ratnagiri, modern minimal map style, realistic texture',
-    'landscape_16_9',
-  ),
+  food: facilitiesImg,
+  gym: comfortImg,
+  firstAid: washroomImg,
+  trophyWall: pavilionImg,
+  teamHuddle: students2Img,
+  mapCard: ground2Img,
   ctaBackground: CTAimg(
     'cricket batsman preparing for a shot under floodlights, dramatic wide banner composition, premium sports advertising photography, realistic',
     'landscape_16_9',
@@ -137,14 +120,8 @@ export const generatedAssets = {
     'cricket team standing together at practice during sunset, wide cinematic banner composition, premium sports photography, realistic',
     'landscape_16_9',
   ),
-  galleryGroup: generatedImage(
-    'youth cricket academy team portrait in training uniforms, premium sports photography, realistic',
-    'landscape_4_3',
-  ),
-  galleryAchievement: generatedImage(
-    'multiple gold trophies and medals displayed proudly for a cricket academy, premium sports award photography, realistic',
-    'landscape_4_3',
-  ),
+  galleryGroup: students2Img,
+  galleryAchievement: pavilionImg,
 }
 
 export const sharedPrograms = [
