@@ -1,10 +1,15 @@
-import { Camera, Globe, Mail, MapPin, Phone, Play } from 'lucide-react'
+import {  Mail, MapPin, Phone} from 'lucide-react'
 import { siteMeta, socialLinks } from '../../data/siteContent'
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 
 const socialIcons = {
-  Facebook: Globe,
-  Instagram: Camera,
-  YouTube: Play,
+  Facebook: FaFacebookF,
+  Instagram: FaInstagram,
+  YouTube: FaYoutube,
 }
 
 const TopBar = () => {
