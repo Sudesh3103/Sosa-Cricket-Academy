@@ -1,4 +1,4 @@
-const SectionHeader = ({ eyebrow, title,title2, description, align = 'left', light = false }) => {
+const SectionHeader = ({ eyebrow, title, description, align = 'left', light = false }) => {
   const alignment = align === 'center' ? 'text-center mx-auto' : 'text-left'
 
   return (
@@ -11,10 +11,7 @@ const SectionHeader = ({ eyebrow, title,title2, description, align = 'left', lig
       <h2 className={`text-3xl font-black uppercase tracking-[-0.03em] sm:text-4xl ${light ? 'text-white' : 'text-[#102216]'}`}>
         {title}
       </h2>
-      <h2 className={`text-3xl font-black uppercase tracking-[-0.03em] sm:text-4xl ${light ? 'text-white' : 'text-white'}`}>
-        {title2}
-      </h2>
-      {description ? <p className={`text-base leading-7 ${light ? 'text-white/78' : 'text-gray-500'}`}>{description}</p> : null}
+      {description ? <p className={`text-base leading-7 ${light ? 'text-white/78' : 'text-slate-600'}`}>{description}</p> : null}
     </div>
   )
 }

@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="space-y-5">
           <BrandLogo compact />
           <p className="max-w-sm text-sm leading-7 text-white/62">
-            Building champions on and off the field with world-class coaching, year-round indoor training and athlete-first development in Ratnagiri.
+            SOSA is a cricket ground-first venue in Ratnagiri, trusted for team practice, tournaments, camps and quality cricket infrastructure.
           </p>
           <div className="space-y-3 text-sm">
             <a href={`tel:${siteMeta.phoneLink}`} className="flex items-center gap-3 transition hover:text-white">
@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="mb-5 text-sm font-extrabold uppercase tracking-[0.24em] text-[#ffca28]">Academy</h3>
+          <h3 className="mb-5 text-sm font-extrabold uppercase tracking-[0.24em] text-[#ffca28]">Ground Booking</h3>
           <div className="space-y-3 text-sm">
             {footerLinks.academy.map((item) => (
               <a key={item.label} href={item.path} className="block transition hover:text-white">
@@ -86,7 +86,7 @@ const Footer = () => {
         <div>
           <h3 className="mb-5 text-sm font-extrabold uppercase tracking-[0.24em] text-[#ffca28]">Newsletter</h3>
           <p className="text-sm leading-7 text-white/62">
-            Subscribe to get the latest updates about academy batches, camps and ground bookings.
+            Subscribe to get updates about ground availability, tournament opportunities and academy announcements.
           </p>
           <form className="mt-4 flex items-center overflow-hidden rounded-full border border-white/10 bg-white/6">
             <input

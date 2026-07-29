@@ -1,71 +1,42 @@
 import academyImg from '../assets/images/home/Academy.jpeg'
+import academy2Img from '../assets/images/home/Academy2.png'
 import bedroomImg from '../assets/images/home/Bedroom.jpeg'
 import comfortImg from '../assets/images/home/Comfort.jpeg'
+import ctaImg from '../assets/images/home/CTA.png'
 import facilitiesImg from '../assets/images/home/Facilities.jpeg'
 import greenTurfImg from '../assets/images/home/Green Turf.jpeg'
 import groundImg from '../assets/images/home/Ground.jpeg'
 import ground2Img from '../assets/images/home/Ground2.jpeg'
 import ground3Img from '../assets/images/home/Ground3.jpeg'
-import pavilionImg from '../assets/images/home/Pavilion.jpeg'
+import netsImg from '../assets/images/home/Nets.png'
+import pavilionImg from '../assets/images/home/Pavilion.png'
 import studentsImg from '../assets/images/home/Students.jpeg'
 import students2Img from '../assets/images/home/Students2.jpeg'
 import washroomImg from '../assets/images/home/Washroom.jpeg'
 import yardImg from '../assets/images/home/Yard.jpeg'
-import boyplayImg from '../assets/images/home/boyplay.png'
-import Academy2Img from '../assets/images/home/Academy2.png'
-import NetsImg from '../assets/images/home/Nets.png'
-import Coach1Img from '../assets/images/about/Coach1.jpeg'
-import Coach2Img from '../assets/images/about/Coach2.jpeg'
-import CTA from '../assets/images/home/CTA.png'
-import Ground from '../assets/videos/Ground.mp4'
-
-const HeroImg = (prompt, imageSize = 'landscape_16_9') =>
-  Ground
-
-const aboutHero = (prompt, imageSize = 'landscape_16_9') =>
-  studentsImg
-
-const academyHero = (prompt, imageSize = 'landscape_16_9') =>
-  Academy2Img
-
-const facilitiesHero = (prompt, imageSize = 'landscape_16_9') =>
-  NetsImg
-
-const galleryHero = (prompt, imageSize = 'landscape_16_9') =>
-  students2Img
-
-const contactHero = (prompt, imageSize = 'landscape_16_9') =>
-  groundImg
-
-const founderOne = (prompt, imageSize = 'landscape_16_9') =>
-  Coach1Img
-
-const founderTwo = (prompt, imageSize = 'landscape_16_9') =>
-  Coach2Img
-
-const CTAimg = (prompt, imageSize = 'landscape_16_9') =>
-  CTA
-
-const generatedImage = (prompt, imageSize = 'landscape_16_9') =>
-  facilitiesImg
+import coach1Img from '../assets/images/about/Coach1.jpeg'
+import coach2Img from '../assets/images/about/Coach2.jpeg'
+import aboutVideo from '../assets/videos/About.mp4'
+import groundHeroVideo from '../assets/videos/Ground.mp4'
+import groundShowcaseVideo from '../assets/videos/Ground1.mp4'
 
 export const siteMeta = {
-  phoneDisplay: '+91 9673373093',
+  phoneDisplay: '+91 96733 73093',
   phoneLink: '+919673373093',
-  whatsappLink: '+91 9673373093',
+  whatsappLink: '919673373093',
   email: 'info@sosacricketacademy.com',
   location: 'Ratnagiri',
   fullAddress: 'SOSA Cricket Academy, Nachane, Ratnagiri - 415639, Maharashtra',
-  admissionsText: 'Admissions Open 2026 | Limited Seats | Enroll Now',
+  admissionsText: 'Ground Bookings Open | Practice & Tournament Slots Available',
 }
 
 export const navLinks = [
   { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' },
-  { label: 'Academy', path: '/academy' },
   { label: 'Ground', path: '/ground' },
+  { label: 'About', path: '/about' },
   { label: 'Facilities', path: '/facilities' },
   { label: 'Gallery', path: '/gallery' },
+  { label: 'Academy', path: '/academy' },
   { label: 'Contact', path: '/contact' },
 ]
 
@@ -76,52 +47,25 @@ export const socialLinks = [
 ]
 
 export const generatedAssets = {
-  homeHero: HeroImg(
-    'cinematic indian cricket batsman playing an explosive front foot shot under dramatic floodlights, stadium dust, golden sunset haze, premium sports campaign photography, realistic, ultra detailed',
-  ),
-  aboutHero: aboutHero(
-    'luxury cricket academy pavilion beside a lush green cricket ground in coastal india, cinematic evening light, premium architecture photography, realistic, detailed sky',
-  ),
-  academyHero: academyHero(
-    'young indian cricketer practicing batting inside an elite indoor cricket academy net facility, dramatic green lights, premium sports editorial photography, realistic',
-  ),
-  facilitiesHero: facilitiesHero(
-    'modern cricket academy building illuminated by stadium floodlights at night, lush outfield, premium sports venue photography, realistic, cinematic',
-  ),
-  galleryHero: galleryHero(
-    'professional indian batsman in full white cricket gear playing a shot inside an indoor practice arena, dramatic spotlight, premium sports photography, realistic',
-  ), 
-  contactHero: contactHero(
-    'aerial view of a professional cricket ground in ratnagiri, india, with lush green outfield and pavilion, premium drone photography, realistic',
-  ),
-  founderOne: founderOne(
-    'professional portrait of an indian sports academy founder in black shirt, confident pose, premium studio lighting, realistic, neutral background',
-    'portrait_4_3',
-  ),
-  founderTwo: founderTwo(
-    'professional portrait of an indian sports academy founder in white shirt, confident pose, premium studio lighting, realistic, neutral background',
-    'portrait_4_3',
-  ),
+  homeHero: groundHeroVideo,
+  groundHero: groundShowcaseVideo,
+  aboutHero: ground2Img,
+  aboutStoryVideo: aboutVideo,
+  academyHero: academy2Img,
+  facilitiesHero: netsImg,
+  galleryHero: ground3Img,
+  contactHero: groundImg,
+  founderOne: coach1Img,
+  founderTwo: coach2Img,
   food: facilitiesImg,
   gym: comfortImg,
   firstAid: washroomImg,
   trophyWall: pavilionImg,
   teamHuddle: students2Img,
   mapCard: ground2Img,
-  ctaBackground: CTAimg(
-    'cricket batsman preparing for a shot under floodlights, dramatic wide banner composition, premium sports advertising photography, realistic',
-    'landscape_16_9',
-  ),
-  ctaBatsman: CTAimg(
-    'cricket batsman preparing for a shot under floodlights, dramatic wide banner composition, premium sports advertising photography, realistic',
-    'landscape_16_9',
-  ),
-  ctaTeam: generatedImage(
-    'cricket team standing together at practice during sunset, wide cinematic banner composition, premium sports photography, realistic',
-    'landscape_16_9',
-  ),
-  galleryGroup: students2Img,
-  galleryAchievement: pavilionImg,
+  ctaBackground: ctaImg,
+  ctaBatsman: ctaImg,
+  ctaTeam: ctaImg,
 }
 
 export const sharedPrograms = [
@@ -131,7 +75,7 @@ export const sharedPrograms = [
     title: 'SOSA Strikers',
     duration: '2.5 Hours per Session',
     price: '₹2,500',
-    note: 'High-intensity training with advanced skills, match awareness and discipline.',
+    note: 'Long-format sessions for committed players working on technique, fitness and match awareness.',
     button: 'Join Group A',
     featured: false,
   },
@@ -141,17 +85,17 @@ export const sharedPrograms = [
     title: 'SOSA Rising Stars',
     duration: '1.5 Hours per Session',
     price: '₹1,500',
-    note: 'Focused development for young players building strong all-round fundamentals.',
+    note: 'Skill-building sessions for developing players who need regular structured coaching.',
     button: 'Join Group B',
     featured: false,
   },
   {
     id: 'weekend',
     eyebrow: 'Weekend Batch',
-    title: 'For Players Attending Weekends Only',
-    duration: 'Weekend Only',
+    title: 'Weekend Only Program',
+    duration: 'Weekend Sessions',
     price: '₹1,500',
-    note: 'Ideal for students and players balancing school, travel and competitive practice.',
+    note: 'Ideal for students and players who can attend only on weekends without missing quality coaching.',
     button: 'Join Weekend Batch',
     featured: true,
   },
@@ -159,186 +103,278 @@ export const sharedPrograms = [
 
 export const homePage = {
   hero: {
-    eyebrow: 'Train Hard. Dream Big.',
-    title: 'Represent India',
+    eyebrow: 'SOSA Ground Booking',
+    title: 'Professional Ground For Practice & Tournaments',
     description:
-      'World-class cricket coaching in Ratnagiri with focused training, fitness-first development and year-round indoor practice.',
+      'SOSA is primarily a match-ready cricket ground in Ratnagiri for teams, tournaments, camps and high-quality practice sessions, with academy coaching available as a secondary offering.',
     backgroundImage: generatedAssets.homeHero,
     actions: [
-      { label: 'Book Ground', href: '/contact', variant: 'secondary' },
-      { label: 'Join Academy', href: '/contact', variant: 'primary' },
-      
+      { label: 'Book Ground', href: '/ground', variant: 'primary' },
+      { label: 'Tournament Enquiry', href: '/contact', variant: 'secondary' },
     ],
     highlightStats: [
       { value: '150+', label: 'Booking Days' },
-      { value: '500+', label: 'Players Trained' },
-      { value: '2', label: 'Practice Nets' },
+      { value: '10+', label: 'Tournaments' },
+      { value: '50+', label: 'Teams Hosted' },
     ],
   },
   stats: [
-    { value: '150+', label: 'Booking Days', helper: 'Last season success' },
-    { value: '500+', label: 'Players Trained', helper: 'Growing every season' },
-    { value: '365', label: 'Days Training', helper: 'Year-round sessions' },
-    { value: '2', label: 'Professional Nets', helper: 'Indoor practice spaces' },
+    { value: '150+', label: 'Booking Days', helper: 'Strong seasonal demand' },
+    { value: '10+', label: 'Tournaments Hosted', helper: 'Competitive match events' },
+    { value: '50+', label: 'Teams Served', helper: 'Practice and tournament bookings' },
+    { value: '2', label: 'Practice Nets', helper: 'Indoor support available' },
   ],
   reasons: [
-    { title: 'Fitness First', description: 'Every session starts by building athletic foundations for long-term growth.' },
-    { title: 'Professional Coaching', description: 'Structured coaching plans with focused feedback and match intelligence.' },
-    { title: 'Leather Ball Practice', description: 'Consistent exposure to real-game conditions for stronger confidence.' },
-    { title: 'Indoor Facility', description: 'Monsoon never stops training thanks to our indoor practice infrastructure.' },
-    { title: 'Match Awareness', description: 'Players improve decision making, tactical reading and game temperament.' },
-    { title: 'Individual Attention', description: 'Small-group coaching ensures every player gets corrective guidance.' },
+    { title: 'Match-Ready Ground', description: 'Professional playing conditions for practice games, league matches and tournaments.' },
+    { title: 'Tournament Friendly', description: 'A strong venue option for cricket events, selection trials and organized competitions.' },
+    { title: 'Day & Evening Slots', description: 'Flexible timing windows to support teams, organizers and working players.' },
+    { title: 'Pavilion & Seating', description: 'Comfortable pavilion and viewing space for teams, staff and spectators.' },
+    { title: 'Support Facilities', description: 'Parking, washrooms, changing space and on-ground convenience for smooth operations.' },
+    { title: 'Trusted In Ratnagiri', description: 'A reliable local venue known for well-maintained infrastructure and repeat bookings.' },
   ],
-  aboutPreview: {
-    image: ground2Img,
-    title: 'About SOSA',
-    heading: 'Building complete athletes, not just cricketers.',
+  showcase: {
+    eyebrow: 'Ground Focus',
+    heading: "Ratnagiri's trusted cricket ground for teams, camps and tournaments.",
     description:
-      'SOSA Cricket Academy in Ratnagiri combines structured coaching, modern facilities and a strong culture of discipline. Our mission is to help players grow in fitness, skills, confidence and competitive mindset.',
+      'From practice bookings to tournament hosting, SOSA gives teams a clean, professional and well-managed cricket environment. This is the first thing we want visitors to understand when they land on the website.',
     points: [
-      'Indoor cricket academy for uninterrupted monsoon training',
-      'Morning and evening batches for flexible schedules',
-      'Focused development across batting, bowling, fielding and wicketkeeping',
+      'Available for team practice sessions and friendly matches',
+      'Suitable for tournaments, cricket camps and trials',
+      'Backed by pavilion, parking, washrooms and support spaces',
     ],
-    action: { label: 'Know More About Us', href: '/about' },
+    image: ground2Img,
+    action: { label: 'Explore Ground Details', href: '/ground' },
   },
-  methodology: [
-    { title: 'Warm Up', subtitle: 'Mobility & activation', icon: 'warmup' },
-    { title: 'Fitness & Conditioning', subtitle: 'Strength and stamina', icon: 'fitness' },
-    { title: 'Fielding Drills', subtitle: 'Reaction and control', icon: 'fielding' },
-    { title: 'Batting Practice', subtitle: 'Technique and timing', icon: 'batting' },
-    { title: 'Bowling Drills', subtitle: 'Rhythm and accuracy', icon: 'bowling' },
-    { title: 'Match Practice', subtitle: 'Game scenario learning', icon: 'match' },
-    { title: 'Performance Analysis', subtitle: 'Track and improve', icon: 'analysis' },
+  bookingOptions: [
+    {
+      id: 'practice',
+      eyebrow: 'Practice Booking',
+      title: 'Team Practice Sessions',
+      duration: 'Morning & Evening Slots',
+      price: 'Custom Enquiry',
+      note: 'Ideal for clubs, local teams and squads that need a reliable practice venue with match-like conditions.',
+      button: 'Book Practice Slot',
+      featured: false,
+    },
+    {
+      id: 'tournament',
+      eyebrow: 'Tournament Booking',
+      title: 'League & Tournament Matches',
+      duration: 'Half Day / Full Day',
+      price: 'Custom Enquiry',
+      note: 'Use SOSA for organized tournaments, trials, seasonal competitions and special cricket events.',
+      button: 'Plan Tournament',
+      featured: true,
+    },
+    {
+      id: 'camp',
+      eyebrow: 'Group Booking',
+      title: 'Camps & Special Events',
+      duration: 'Flexible Scheduling',
+      price: 'Custom Enquiry',
+      note: 'Suitable for camps, selection events, school or academy groups and cricket activations.',
+      button: 'Enquire Now',
+      featured: false,
+    },
+  ],
+  facilities: [
+    { title: 'Cricket Ground', image: groundImg },
+    { title: 'Pavilion Seating', image: pavilionImg },
+    { title: 'Indoor Nets', image: greenTurfImg },
+    { title: 'Changing Room', image: bedroomImg },
+    { title: 'Parking Space', image: yardImg },
+    { title: 'Washrooms', image: washroomImg },
   ],
   galleryPreview: {
-    filters: ['All', 'Practice', 'Matches', 'Events'],
+    filters: ['All', 'Ground', 'Practice', 'Tournament'],
     items: [
-      { category: 'Practice', image: academyImg, title: 'Indoor Net Sessions' },
-      { category: 'Matches', image: ground3Img, title: 'Floodlit Match Practice' },
-      { category: 'Practice', image: studentsImg, title: 'Coaching Group Session' },
-      { category: 'Events', image: generatedAssets.galleryGroup, title: 'Academy Team Moments' },
-      { category: 'Practice', image: greenTurfImg, title: 'Focused Skill Drills' },
-      { category: 'Matches', image: groundImg, title: 'Ground Readiness' },
+      { category: 'Ground', image: groundImg, title: 'Main Ground View' },
+      { category: 'Ground', image: ground2Img, title: 'Aerial Ground Look' },
+      { category: 'Practice', image: greenTurfImg, title: 'Indoor Net Support' },
+      { category: 'Tournament', image: ground3Img, title: 'Match Atmosphere' },
+      { category: 'Ground', image: pavilionImg, title: 'Pavilion Comfort' },
+      { category: 'Practice', image: studentsImg, title: 'Team Session Activity' },
     ],
   },
   testimonials: [
     {
-      name: 'Aryan P.',
-      role: 'Parent of Player',
+      name: 'Local Club Captain',
+      role: 'Team Booking',
       quote:
-        'SOSA Academy has transformed my son’s discipline and confidence. The structure, coaching quality and facilities are far beyond what we expected in Ratnagiri.',
+        'SOSA gives us the kind of ground setup we usually expect only in bigger cities. It works really well for team practice and small tournaments.',
     },
     {
-      name: 'Neha S.',
-      role: 'Student Cricketer',
+      name: 'Tournament Organizer',
+      role: 'Cricket Event Host',
       quote:
-        'I love the way every session feels purposeful. We work on fitness, skills and game awareness together, which makes training far more effective.',
-    },
-    {
-      name: 'Ravi K.',
-      role: 'Young All-rounder',
-      quote:
-        'The indoor nets and personal attention helped me improve quickly. I feel more prepared during matches and trials now.',
+        'The venue feels organized and dependable. Ground quality, space and support facilities make event planning much easier.',
     },
   ],
   events: [
-    { title: 'SOSA Cricket Camp 2026', date: '15 May - 30 May 2026', note: 'Registration open now' },
-    { title: 'Selection Trials', date: '10 June 2026', note: 'Limited seats available' },
-    { title: 'Inter Academy Tournament', date: '20 July 2026', note: 'Register your team' },
+    { title: 'Team Practice Slots', date: 'Available Weekly', note: 'Book your preferred timing' },
+    { title: 'Tournament Enquiries', date: 'Open All Season', note: 'For local and regional events' },
+    { title: 'Cricket Camps', date: 'Custom Scheduling', note: 'For group and academy bookings' },
   ],
   contact: {
-    title: 'Get in Touch',
-    text: 'Have questions about admissions, batches or facility bookings? Reach out and our team will help you choose the right option.',
+    title: 'Ground Booking Enquiry',
+    text: 'Tell us whether you need the ground for practice, a tournament, a camp or a special cricket event. We will guide you on timings and booking options.',
     mapImage: generatedAssets.mapCard,
+  },
+}
+
+export const groundPage = {
+  hero: {
+    eyebrow: 'SOSA Cricket Ground',
+    title: 'Book A Ground Built For Serious Cricket',
+    subtitle: 'Practice, Matches & Tournaments',
+    description:
+      'A premium cricket ground in Ratnagiri for team practice, league fixtures, tournaments and organized cricket events.',
+    backgroundImage: generatedAssets.groundHero,
+    actions: [
+      { label: 'Book Ground', href: '/contact', variant: 'primary' },
+      { label: 'Call Now', href: `tel:${siteMeta.phoneLink}`, variant: 'secondary' },
+    ],
+    sideFacts: ['Practice & tournament use', 'Team-friendly scheduling', 'Pavilion & support spaces', 'Ratnagiri location'],
+  },
+  overview: {
+    eyebrow: 'Why Teams Choose SOSA',
+    title: 'A ground experience that feels ready for real cricket.',
+    description:
+      'SOSA is used more for ground bookings than academy activity. That is why the venue is positioned for teams first: better playing atmosphere, better hosting convenience and better clarity for organizers.',
+    video: generatedAssets.groundHero,
+    bullets: [
+      'Suitable for team practice, match simulations and tournaments',
+      'Convenient for clubs, cricket groups, schools and event organizers',
+      'Supported by pavilion, parking, washrooms and indoor practice nets',
+    ],
+  },
+  stats: [
+    { value: '150+', label: 'Booking Days' },
+    { value: '10+', label: 'Tournaments Hosted' },
+    { value: '50+', label: 'Teams Hosted' },
+    { value: '200+', label: 'Spectator Capacity' },
+  ],
+  features: [
+    { title: 'Professional Playing Surface', description: 'Well-kept ground conditions for serious team sessions and proper cricket events.' },
+    { title: 'Tournament-Ready Setup', description: 'A strong venue option for local competitions, school matches and selection events.' },
+    { title: 'Floodlit Support', description: 'Evening-friendly scheduling with better flexibility for working teams and organizers.' },
+    { title: 'Pavilion & Viewing Area', description: 'Comfortable seating and a structured space for players, coaches and supporters.' },
+    { title: 'Indoor Practice Nets', description: 'Additional support for warm-up and practice when teams need more utility from the venue.' },
+    { title: 'Player Convenience', description: 'Changing rooms, washrooms, parking and basic support facilities on site.' },
+  ],
+  amenities: [
+    'Pavilion Seating',
+    'Parking',
+    'Changing Rooms',
+    'Washrooms',
+    'Indoor Nets',
+    'Flood Lights',
+    'Team Warm-up Space',
+    'Event-Friendly Layout',
+  ],
+  booking: {
+    title: 'Ground Booking Options',
+    description: 'We support regular practice slots, one-off bookings, tournament scheduling and special cricket events.',
+    cards: [
+      { label: 'Team Practice', value: 'Morning & Evening' },
+      { label: 'Tournament Use', value: 'Half Day / Full Day' },
+      { label: 'Bulk Events', value: 'Custom Packages' },
+    ],
+  },
+  gallery: [
+    { title: 'Main Ground', category: 'Ground', image: groundImg },
+    { title: 'Aerial View', category: 'Ground', image: ground2Img },
+    { title: 'Match View', category: 'Tournament', image: ground3Img },
+    { title: 'Pavilion', category: 'Facilities', image: pavilionImg },
+    { title: 'Indoor Nets', category: 'Practice', image: greenTurfImg },
+    { title: 'Support Spaces', category: 'Facilities', image: yardImg },
+  ],
+  cta: {
+    title: 'Need a dependable ground for your team?',
+    accent: 'Book SOSA for practice or tournaments.',
+    description: 'Talk to us for availability, timings and booking support.',
   },
 }
 
 export const aboutPage = {
   hero: {
     eyebrow: 'About SOSA',
-    title: 'Building Champions. Building Character.',
+    title: 'A Sports Venue Built To Raise Ratnagiri Cricket Standards',
     description:
-      'SOSA was created to provide world-class sports infrastructure and high-quality coaching to athletes from Ratnagiri and nearby regions.',
+      'SOSA was built to bring professional cricket infrastructure to Ratnagiri, with ground booking and tournament hosting as the clearest part of that vision.',
     backgroundImage: generatedAssets.aboutHero,
   },
   journey: {
-    title: 'A Journey of Passion, Persistence & Purpose',
+    eyebrow: 'Our Story',
+    title: 'Built with the vision of creating a ground players would travel for.',
     paragraphs: [
-      'When the vision for SOSA Cricket Ground first took shape, many believed players would never travel so far for top-class practice.',
-      'That belief changed once athletes experienced the quality of our facilities, our service standards and our long-term commitment to player growth.',
+      'When SOSA began, the aim was simple: build a sports venue in Ratnagiri that felt serious, reliable and professionally maintained.',
+      'Over time, teams, organizers, players and parents responded strongly to the ground itself. That is why SOSA today is understood first as a quality cricket ground, with academy coaching as an important but secondary part of the ecosystem.',
     ],
     points: [
-      '150+ booking days in the last season',
-      'Demand continues to rise across every batch',
-      'Trusted by players, parents, teams and academies',
+      'Trusted for practice, tournaments and cricket events',
+      'Designed to improve the sports infrastructure available in the region',
+      'Built by founders committed to long-term sporting growth in Ratnagiri',
     ],
-    action: { label: 'Explore Our Facilities', href: '/facilities' },
+    action: { label: 'View Ground Details', href: '/ground' },
+    video: generatedAssets.aboutStoryVideo,
   },
   stats: [
-    { value: '150+', label: 'Booking Days', helper: 'In last season' },
-    { value: '500+', label: 'Players Trained', helper: 'And growing' },
-    { value: '10+', label: 'Tournaments', helper: 'Hosted every year' },
-    { value: '1', label: 'Dream', helper: 'Represent India' },
+    { value: '150+', label: 'Booking Days', helper: 'Season demand' },
+    { value: '10+', label: 'Tournaments', helper: 'Events hosted' },
+    { value: '50+', label: 'Teams', helper: 'Ground users served' },
+    { value: '1', label: 'Mission', helper: 'Raise local standards' },
   ],
   founders: [
-    {
-      name: 'Muzamil Sawant',
-      role: 'Co-Founder',
-      image: generatedAssets.founderOne,
-    },
-    {
-      name: 'Ketan Sawant',
-      role: 'Co-Founder',
-      image: generatedAssets.founderTwo,
-    },
+    { name: 'Muzamil Sawant', role: 'Co-Founder', image: generatedAssets.founderOne },
+    { name: 'Ketan Sawant', role: 'Co-Founder', image: generatedAssets.founderTwo },
   ],
   foundersStory:
-    'SOSA was founded by two college friends with a shared passion for sports and a strong commitment to creating opportunities for aspiring athletes. Their international exposure helped shape the vision of bringing premium sports experiences to Ratnagiri.',
+    'SOSA was created by founders who wanted Ratnagiri to have a venue that could host better cricket, support player development and bring quality sports infrastructure closer to local talent.',
   philosophy: {
     title: 'Sports Beyond Business',
     body:
-      'At SOSA, sports are more than a business. They are a responsibility. We believe sports build discipline, confidence, teamwork and character, especially in young athletes learning how to compete with purpose.',
+      'For SOSA, building a venue is not just a commercial decision. It is an investment in sporting culture, discipline and opportunity. The goal has always been to create a place where good cricket can happen consistently.',
     image: students2Img,
-    button: { label: 'Read Our Story', href: '/gallery' },
+    button: { label: 'Explore Gallery', href: '/gallery' },
   },
   vision: {
-    title: 'One Dream. One Nation.',
-    statement: 'To nurture sportspersons from Ratnagiri who can represent India with pride.',
+    title: 'Infrastructure That Creates Opportunity',
+    statement: 'Create better cricket environments so more players and teams from Ratnagiri can compete with confidence.',
     body:
-      'Successful athletes grow with support from both coaches and families. That is why SOSA aims to educate parents as well, creating an environment where talent can thrive over time.',
+      'The long-term vision is to keep improving the venue, support serious cricket activity and strengthen the sporting ecosystem around the region.',
   },
 }
 
 export const academyPage = {
   hero: {
-    eyebrow: 'Home / Academy',
-    title: 'SOSA Cricket Academy',
+    eyebrow: 'Academy',
+    title: 'Structured Cricket Coaching For Player Development',
     description:
-      'At SOSA, we do not just train cricketers. We build complete athletes through fitness, technical coaching and disciplined practice.',
+      'The academy page focuses only on training batches, coaching philosophy, timings and player development pathways.',
     backgroundImage: generatedAssets.academyHero,
     highlights: ['Fitness First', 'Skill Development', 'Individual Attention', 'Match Awareness'],
-    sideFacts: ['2 Practice Nets', 'Indoor Training', 'Year-Round Sessions', 'Professional Coaching'],
+    sideFacts: ['Morning & evening batches', 'Indoor support', 'Structured coaching', 'Beginner to developing players'],
   },
   programs: sharedPrograms,
   philosophy: {
-    title: 'Fitness is the foundation of great cricket',
+    title: 'Fitness is the foundation of good cricket',
     body:
-      'Every training session at SOSA is designed to build complete athletes. Players improve movement quality, strength, agility, endurance and cricket-specific skills in one structured environment.',
+      'Every academy session is designed to improve athletic movement, discipline, technical execution and confidence in match situations.',
     bullets: [
-      'Dynamic warm-up and mobility exercises',
+      'Dynamic warm-up and mobility',
       'Strength and conditioning',
-      'Speed, agility and endurance work',
-      'Fielding drills and reaction training',
-      'Shadow practice and match awareness',
+      'Speed, agility and endurance drills',
+      'Fielding routines and reaction work',
       'Batting, bowling and wicketkeeping development',
+      'Match awareness and cricket decision-making',
     ],
-    image: studentsImg,
+    image: academyImg,
   },
   yearRound: {
-    title: 'Year-round training',
-    text: 'SOSA is an indoor cricket academy, allowing uninterrupted training through the year, including the monsoon season.',
-    chips: ['Rain or Shine', '365 Days', 'Safe & Secure', 'No Interruptions'],
+    title: 'Year-round indoor-supported training',
+    text: 'SOSA academy sessions continue through changing weather conditions with indoor practice support when required.',
+    chips: ['Fitness First', 'Skill Progression', 'Safe Environment', 'Coaching Attention'],
   },
   timings: [
     { label: 'Morning Batch', value: '7:15 AM - 9:00 AM' },
@@ -346,129 +382,101 @@ export const academyPage = {
     { label: 'Weekly Holiday', value: 'One day every week' },
   ],
   perks: [
-    'Professional & experienced coaches',
-    'High quality turf and nets',
-    'New leather cricket balls',
-    'Modern coaching equipment',
-    'Fitness and strength training',
-    'Personalized attention',
+    'Professional coaching support',
+    'Small-batch player attention',
+    'Indoor nets and turf support',
+    'Fitness-based training structure',
+    'Skill development for batting, bowling and fielding',
+    'Consistent routine for growing players',
   ],
-  lifeGallery: [academyImg, students2Img, studentsImg, greenTurfImg, generatedAssets.galleryGroup],
+  lifeGallery: [academyImg, academy2Img, studentsImg, students2Img, greenTurfImg],
+  cta: {
+    title: 'Looking for coaching instead of ground booking?',
+    accent: 'Talk to us about academy admission.',
+    primary: { label: 'Academy Enquiry', href: '/contact' },
+    secondary: { label: 'View Programs', href: '/academy#programs' },
+  },
 }
 
 export const facilitiesPage = {
   hero: {
-    eyebrow: 'Our Facilities',
-    title: 'World-Class Facilities Built for Champions',
+    eyebrow: 'Facilities',
+    title: 'Ground Support Facilities Built For Teams And Events',
     description:
-      'At SOSA, every space is designed to support serious training, player comfort and a high-quality sports experience for athletes and families.',
+      'SOSA facilities are designed to make ground bookings smoother for teams, organizers, players and visitors.',
     backgroundImage: generatedAssets.facilitiesHero,
-    highlights: ['Premium Infrastructure', 'Safe & Secure Environment', 'Well Maintained Facilities', 'Player Comfort First'],
+    highlights: ['Ground Access', 'Indoor Nets', 'Pavilion Support', 'Player Comfort'],
   },
   facilities: [
-    {
-      id: 'ground',
-      title: 'SOSA Cricket Ground',
-      text: '67-yard professional ground with top-quality pitch, outfield and pavilion seating.',
-      image: groundImg,
-    },
-    {
-      title: 'Indoor Practice Nets',
-      text: 'Two well-maintained indoor practice nets for uninterrupted year-round training.',
-      image: greenTurfImg,
-    },
-    {
-      title: 'Changing Rooms',
-      text: 'Spacious and clean changing rooms with lockers, showers and match-day convenience.',
-      image: bedroomImg,
-    },
-    {
-      title: 'Fitness & Gym',
-      text: 'Strength and conditioning area equipped for movement, power and endurance work.',
-      image: generatedAssets.gym,
-    },
-    {
-      title: 'Flood Lights',
-      text: 'Well-lit playing conditions for practice sessions and evening matches.',
-      image: facilitiesImg,
-    },
-    {
-      title: 'Parking Space',
-      text: 'Convenient parking for players, parents, teams and academy visitors.',
-      image: yardImg,
-    },
-    {
-      title: 'Food & Refreshments',
-      text: 'Nutritious meals and refreshments for players and academy guests.',
-      image: generatedAssets.food,
-    },
-    {
-      title: 'First Aid Support',
-      text: 'Immediate support and basic medical readiness for player safety at all times.',
-      image: generatedAssets.firstAid,
-    },
+    { id: 'ground', title: 'SOSA Cricket Ground', text: 'Professional venue for practice sessions, matches and tournaments.', image: groundImg },
+    { title: 'Indoor Practice Nets', text: 'Support training and pre-match preparation with indoor net access.', image: greenTurfImg },
+    { title: 'Changing Rooms', text: 'Clean changing areas for players and teams.', image: bedroomImg },
+    { title: 'Player Comfort Area', text: 'Space that supports athletes before and after sessions.', image: comfortImg },
+    { title: 'Pavilion Seating', text: 'Viewing and sitting area for teams, organizers and spectators.', image: pavilionImg },
+    { title: 'Parking Space', text: 'Convenient access for teams and visitors.', image: yardImg },
+    { title: 'Washrooms', text: 'Basic on-site convenience for players and guests.', image: washroomImg },
+    { title: 'Food & Refreshments', text: 'Refreshment support for longer stays and match days.', image: facilitiesImg },
   ],
   futureFacilities: [
-    '8-Court Badminton Complex',
-    'Olympic-Size Swimming Pool',
-    'Multipurpose Indoor Hall',
-    'Indoor Games & Recreation',
+    'Expanded event hosting support',
+    'Stronger player utility areas',
+    'More spectator convenience',
+    'Improved tournament operations',
   ],
 }
 
 export const galleryPage = {
   hero: {
-    eyebrow: 'Home / Gallery',
-    title: 'Gallery',
-    subtitle: 'Moments that inspire',
-    description: 'Explore moments of practice, teamwork, progress and celebration at SOSA Cricket Academy.',
+    eyebrow: 'Gallery',
+    title: 'SOSA Ground & Cricket Moments',
+    subtitle: 'Ground, teams, practice and events',
+    description: 'Explore ground views, match setups, practice activity and the atmosphere that makes SOSA stand out.',
     backgroundImage: generatedAssets.galleryHero,
   },
-  filters: ['All', 'Practice', 'Matches', 'Events', 'Academy Life', 'Ground', 'Achievements'],
+  filters: ['All', 'Ground', 'Practice', 'Tournament', 'Academy', 'Facilities'],
   items: [
-    { category: 'Practice', title: 'Focused Technique Work', image: academyImg, className: 'md:col-span-1' },
+    { category: 'Ground', title: 'Main Ground View', image: groundImg, className: 'md:col-span-1' },
     { category: 'Ground', title: 'Aerial Ground View', image: ground2Img, className: 'md:col-span-2' },
-    { category: 'Academy Life', title: 'Strength Zone', image: generatedAssets.gym, className: 'md:col-span-1' },
-    { category: 'Events', title: 'Team Bonding', image: generatedAssets.galleryGroup, className: 'md:col-span-1' },
-    { category: 'Matches', title: 'Floodlit Match Readiness', image: facilitiesImg, className: 'md:col-span-2' },
-    { category: 'Academy Life', title: 'Squad Portrait', image: students2Img, className: 'md:col-span-1' },
-    { category: 'Practice', title: 'Net Battle', image: greenTurfImg, className: 'md:col-span-1' },
-    { category: 'Events', title: 'Coach Interaction', image: studentsImg, className: 'md:col-span-1' },
-    { category: 'Academy Life', title: 'Training Huddle', image: generatedAssets.teamHuddle, className: 'md:col-span-2' },
-    { category: 'Practice', title: 'Agility Session', image: comfortImg, className: 'md:col-span-1' },
-    { category: 'Ground', title: 'Changing Room Experience', image: washroomImg, className: 'md:col-span-1' },
-    { category: 'Ground', title: 'Night Ground Atmosphere', image: ground3Img, className: 'md:col-span-2' },
-    { category: 'Achievements', title: 'Trophy Collection', image: generatedAssets.galleryAchievement, className: 'md:col-span-1' },
+    { category: 'Facilities', title: 'Pavilion Experience', image: pavilionImg, className: 'md:col-span-1' },
+    { category: 'Practice', title: 'Indoor Net Sessions', image: greenTurfImg, className: 'md:col-span-1' },
+    { category: 'Tournament', title: 'Match Readiness', image: ground3Img, className: 'md:col-span-2' },
+    { category: 'Academy', title: 'Player Development', image: academyImg, className: 'md:col-span-1' },
+    { category: 'Practice', title: 'Coaching Session', image: studentsImg, className: 'md:col-span-1' },
+    { category: 'Academy', title: 'Squad Training', image: students2Img, className: 'md:col-span-1' },
+    { category: 'Facilities', title: 'Player Comfort', image: comfortImg, className: 'md:col-span-2' },
+    { category: 'Facilities', title: 'Changing Rooms', image: bedroomImg, className: 'md:col-span-1' },
+    { category: 'Facilities', title: 'Washroom Access', image: washroomImg, className: 'md:col-span-1' },
+    { category: 'Facilities', title: 'Parking Space', image: yardImg, className: 'md:col-span-2' },
   ],
   stats: [
-    { value: '500+', label: 'Photos' },
-    { value: '80+', label: 'Videos' },
-    { value: '150+', label: 'Events Covered' },
-    { value: '500+', label: 'Happy Players' },
+    { value: '150+', label: 'Ground Bookings' },
+    { value: '10+', label: 'Tournaments' },
+    { value: '50+', label: 'Teams Hosted' },
+    { value: '500+', label: 'Players Reached' },
   ],
 }
 
 export const contactPage = {
   hero: {
     eyebrow: 'Contact Us',
-    title: "WE'D LOVE TO",
-    subtitle: 'HEAR FROM YOU',
+    title: 'BOOK SOSA',
+    subtitle: 'GROUND OR ACADEMY ENQUIRY',
     description:
-      'Have a question about admissions, coaching, or ground bookings? Reach out to our team—we’re always happy to help.',
+      'Reach out for team practice bookings, tournament planning, academy admission or any support related to the venue.',
     backgroundImage: generatedAssets.contactHero,
   },
   contactInfo: [
     {
       icon: 'phone',
       title: 'Call Us',
-      value: '+91 98765 43210',
-      subtitle: 'Mon - Sat | 7:00 AM - 9:00 PM',
+      value: siteMeta.phoneDisplay,
+      subtitle: 'Ground and academy enquiries',
     },
     {
       icon: 'mail',
       title: 'Email Us',
-      value: 'info@sosacricketacademy.com',
-      subtitle: "We'll respond within 24 hours",
+      value: siteMeta.email,
+      subtitle: 'We will get back to you soon',
     },
     {
       icon: 'map',
@@ -479,36 +487,35 @@ export const contactPage = {
     {
       icon: 'whatsapp',
       title: 'WhatsApp',
-      value: '+91 98765 43210',
-      subtitle: 'Quick support & booking assistance',
+      value: siteMeta.phoneDisplay,
+      subtitle: 'Quick help for bookings and questions',
     },
   ],
   officeHours: {
-    title: 'Office Hours',
+    title: 'Available Hours',
     value: 'Monday - Sunday | 6:00 AM - 10:00 PM',
   },
   locationInfo: {
     academy: 'SOSA Cricket Academy',
     address: 'Nachane, Ratnagiri - 415639',
     city: 'Maharashtra, India',
-    distance: 'Only 15 minutes from Ratnagiri City',
-    landmark: 'Near Nachane School & Behind Datta Mandir',
+    distance: 'Easy to reach for local teams and visitors',
+    landmark: 'Ratnagiri, Maharashtra',
     map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d61060.658546784915!2d73.2875051!3d16.9602227!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bea73cea56155cd%3A0xa55303765c724425!2sSawant%20Oasis%20Sports%20Arena%20%7C%20Top%20sport%20cricket%20ground%20%7C%20Sports%20ground%20near%20me%20%7C%20Best%20sport%20ground%20in%20ratnagiri%20%7C!5e0!3m2!1sen!2sin!4v1784987252862!5m2!1sen!2sin',
   },
   cta: {
-    title: 'READY TO TAKE YOUR GAME',
-    accent: 'TO THE NEXT LEVEL?',
-    subtitle:
-      'Join SOSA Cricket Academy today and train with experienced coaches on world-class facilities.',
+    title: 'READY TO BOOK YOUR SLOT?',
+    accent: 'Talk to SOSA today.',
+    subtitle: 'Practice bookings, tournaments and academy enquiries are all handled from one place.',
   },
 }
 
 export const footerLinks = {
   quickLinks: navLinks,
   academy: [
-    { label: 'Programs', path: '/academy#programs' },
-    { label: 'Training Timings', path: '/academy#timings' },
-    { label: 'Coaching Philosophy', path: '/academy#philosophy' },
-    { label: 'Facilities', path: '/facilities' },
+    { label: 'Ground Booking', path: '/ground' },
+    { label: 'Practice & Tournament Enquiry', path: '/contact' },
+    { label: 'Academy Programs', path: '/academy#programs' },
+    { label: 'Gallery', path: '/gallery' },
   ],
 }

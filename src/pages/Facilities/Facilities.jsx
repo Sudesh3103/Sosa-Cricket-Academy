@@ -25,7 +25,7 @@ const Facilities = () => {
           <SectionHeader
             eyebrow="Our Facilities"
             title="Everything a cricketer needs, all in one place"
-            description="Designed for performance, comfort and convenience so players can train with focus and families can enjoy a premium academy environment."
+            description="Designed for performance, comfort and convenience so teams, organizers and players get a smoother ground-booking experience."
             align="center"
           />
 
@@ -70,10 +70,10 @@ const Facilities = () => {
 
       <div >
         <CTASection
-          title="Experience the difference."
-          accent="Train in the best. Become the best."
-          primaryAction={{ label: 'Enroll Now', href: '/academy#programs' }}
-          secondaryAction={{ label: 'Book a Visit', href: '/#contact' }}
+          title="Need the right support around your booking?"
+          accent="Explore SOSA in person."
+          primaryAction={{ label: 'Book Ground', href: '/contact' }}
+          secondaryAction={{ label: 'Contact Us', href: '/contact' }}
           backgroundImage={generatedAssets.ctaBackground}
         />
       </div>

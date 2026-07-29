@@ -7,14 +7,13 @@ import Gallery from '../pages/Gallery/Gallery'
 import Ground from '../pages/Ground/Ground'
 import Contact from '../pages/Contact/Contact'
 
-
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/academy" element={<Academy />} />
-      <Route path="/ground" element={< Ground/>} />
+      <Route path="/ground" element={<Ground />} />
       <Route path="/facilities" element={<Facilities />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/contact" element={<Contact />} />

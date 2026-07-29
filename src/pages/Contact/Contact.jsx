@@ -32,12 +32,12 @@ const Contact = () => {
           description={contactPage.cta.subtitle}
           backgroundImage={generatedAssets.ctaBackground}
           primaryAction={{
-            label: "Enroll Now",
-            href: "/admissions",
-          }}
-          secondaryAction={{
             label: "Book Ground",
             href: "/ground",
+          }}
+          secondaryAction={{
+            label: "Academy Enquiry",
+            href: "/academy",
           }}
         />
       </div>
