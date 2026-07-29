@@ -1,4 +1,5 @@
-import { MessageCircle, Phone } from 'lucide-react'
+import { Phone } from 'lucide-react'
+import { FaWhatsapp } from "react-icons/fa";
 import { siteMeta } from '../../data/siteContent'
 
 const FloatingButtons = () => {
@@ -11,7 +12,7 @@ const FloatingButtons = () => {
         className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#25d366] text-white shadow-2xl shadow-[#25d366]/25 transition hover:-translate-y-1"
         aria-label="Chat on WhatsApp"
       >
-        <MessageCircle size={20} />
+        <FaWhatsapp size={20} />
       </a>
       <a
         href={`tel:${siteMeta.phoneLink}`}
