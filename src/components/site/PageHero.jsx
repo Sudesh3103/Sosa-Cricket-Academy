@@ -26,7 +26,7 @@ const PageHero = ({
       return isVideoBackground
     }
 
-    return !window.matchMedia('(max-width: 767px), (prefers-reduced-motion: reduce)').matches
+    return !window.matchMedia('(prefers-reduced-motion: reduce)').matches
   })
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const PageHero = ({
       return
     }
 
-    const mediaQuery = window.matchMedia('(max-width: 767px), (prefers-reduced-motion: reduce)')
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     const updateVideoMode = () => setShowVideo(!mediaQuery.matches)
     mediaQuery.addEventListener('change', updateVideoMode)
 

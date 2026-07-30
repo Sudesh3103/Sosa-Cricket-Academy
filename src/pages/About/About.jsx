@@ -80,7 +80,7 @@ const About = () => {
 
       <section className="bg-white py-18 sm:py-22">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[1fr_1fr] lg:px-8">
-          <div className="rounded-[32px] border border-[#e4e9e5] bg-[#f8faf8] p-6">
+          <div className="rounded-4xl border border-[#e4e9e5] bg-[#f8faf8] p-6">
             <SectionHeader eyebrow="Our Philosophy" title={aboutPage.philosophy.title} description={aboutPage.philosophy.body} />
             <div className="mt-8 overflow-hidden rounded-[28px]">
               <img src={aboutPage.philosophy.image} alt="SOSA philosophy training session" loading="lazy" decoding="async" className="h-72 w-full object-cover" />
@@ -94,7 +94,7 @@ const About = () => {
             </Link>
           </div>
 
-          <div className="rounded-[32px] border border-[#e4e9e5] bg-white p-6 shadow-sm">
+          <div className="rounded-4xl border border-[#e4e9e5] bg-white p-6 shadow-sm">
             <SectionHeader eyebrow="Our Vision" title={aboutPage.vision.title} />
             <div className="mt-8 rounded-[28px] border border-[#e5ebe6] bg-[#f8faf8] p-6">
               <p className="max-w-md text-2xl font-black uppercase leading-tight tracking-[-0.03em] text-[#102216]">
