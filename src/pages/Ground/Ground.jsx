@@ -6,24 +6,26 @@ import PageHero from '../../components/site/PageHero'
 import SectionHeader from '../../components/site/SectionHeader'
 import SiteLayout from '../../components/site/SiteLayout'
 import { generatedAssets, groundPage } from '../../data/siteContent'
+import { seoPages } from '../../data/seo'
 
 const statIcons = [CalendarDays, Trophy, Users, ShieldCheck]
 
 const Ground = () => {
   return (
-    <SiteLayout>
+    <SiteLayout seo={seoPages.ground}>
       <PageHero
         eyebrow={groundPage.hero.eyebrow}
         title={groundPage.hero.title}
         subtitle={groundPage.hero.subtitle}
         description={groundPage.hero.description}
         backgroundImage={groundPage.hero.backgroundImage}
+        backgroundPoster={groundPage.gallery[0].image}
         actions={groundPage.hero.actions}
         sideFacts={groundPage.hero.sideFacts}
       />
 
       <section className="bg-white py-18 sm:py-22">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:items-stretch lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[1fr_1fr] lg:items-stretch lg:px-8">
           <div className="space-y-6">
             <SectionHeader eyebrow={groundPage.overview.eyebrow} title={groundPage.overview.title} description={groundPage.overview.description} />
             <div className="space-y-4">
@@ -36,8 +38,18 @@ const Ground = () => {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-[32px] shadow-[0_24px_70px_rgba(8,21,14,0.18)] ">
-            <video src={groundPage.overview.video} autoPlay muted loop playsInline className="h-[320px] w-full object-cover lg:h-150" />
+          <div className="overflow-hidden rounded-[32px]  lg:h-150">
+            <video
+              src={groundPage.overview.video}
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              preload="metadata"
+              poster={groundPage.gallery[1].image}
+              className="h-[320px] w-full object-contain lg:h-150"
+            />
           </div>
         </div>
       </section>
@@ -147,7 +159,7 @@ const Ground = () => {
             {groundPage.gallery.map((item) => (
               <article key={`${item.category}-${item.title}`} className="overflow-hidden rounded-[24px] shadow-sm">
                 <div className="relative h-72">
-                  <img src={item.image} alt={item.title} className="h-full w-full object-cover" />
+                  <img src={item.image} alt={item.title} loading="lazy" decoding="async" className="h-full w-full object-cover" />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_35%,rgba(4,10,7,0.82)_100%)]" />
                   <div className="absolute inset-x-0 bottom-0 p-5">
                     <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-[#ffca28]">{item.category}</p>

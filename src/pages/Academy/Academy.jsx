@@ -4,10 +4,11 @@ import PageHero from '../../components/site/PageHero'
 import SectionHeader from '../../components/site/SectionHeader'
 import SiteLayout from '../../components/site/SiteLayout'
 import { academyPage, generatedAssets } from '../../data/siteContent'
+import { seoPages } from '../../data/seo'
 
 const Academy = () => {
   return (
-    <SiteLayout>
+    <SiteLayout seo={seoPages.academy}>
       <PageHero
         eyebrow={academyPage.hero.eyebrow}
         title={
@@ -17,6 +18,7 @@ const Academy = () => {
         }
         description={academyPage.hero.description}
         backgroundImage={academyPage.hero.backgroundImage}
+        backgroundPoster={academyPage.philosophy.image}
         highlights={academyPage.hero.highlights}
         sideFacts={academyPage.hero.sideFacts}
       />
@@ -71,7 +73,7 @@ const Academy = () => {
             </div>
           </div>
           <div className="overflow-hidden rounded-[32px] shadow-[0_28px_80px_rgba(8,21,14,0.16)]">
-            <img src={academyPage.philosophy.image} alt="Cricket academy training session" className="h-full min-h-[440px] w-full object-cover" />
+            <img src={academyPage.philosophy.image} alt="Cricket academy training session" loading="lazy" decoding="async" className="h-full min-h-[440px] w-full object-cover" />
           </div>
         </div>
       </section>
@@ -139,7 +141,7 @@ const Academy = () => {
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
             {academyPage.lifeGallery.map((image, index) => (
               <div key={`${image}-${index}`} className="overflow-hidden rounded-[24px] shadow-sm">
-                <img src={image} alt={`SOSA academy life ${index + 1}`} className="h-48 w-full object-cover transition duration-500 hover:scale-105" />
+                <img src={image} alt={`SOSA academy life ${index + 1}`} loading="lazy" decoding="async" className="h-48 w-full object-cover transition duration-500 hover:scale-105" />
               </div>
             ))}
           </div>

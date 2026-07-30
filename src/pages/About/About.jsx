@@ -5,10 +5,11 @@ import PageHero from '../../components/site/PageHero'
 import SectionHeader from '../../components/site/SectionHeader'
 import SiteLayout from '../../components/site/SiteLayout'
 import { aboutPage, generatedAssets } from '../../data/siteContent'
+import { seoPages } from '../../data/seo'
 
 const About = () => {
   return (
-    <SiteLayout>
+    <SiteLayout seo={seoPages.about}>
       <PageHero
         eyebrow={aboutPage.hero.eyebrow}
         title={aboutPage.hero.title}
@@ -66,7 +67,7 @@ const About = () => {
           <div className="grid gap-5 sm:grid-cols-2">
             {aboutPage.founders.map((founder) => (
               <article key={founder.name} className="overflow-hidden rounded-[26px] border border-white/10 bg-white text-[#102216] shadow-2xl shadow-black/20">
-                <img src={founder.image} alt={founder.name} className="h-72 w-full object-contain" />
+                <img src={founder.image} alt={founder.name} loading="lazy" decoding="async" className="h-72 w-full object-contain" />
                 <div className="px-5 py-5 text-center">
                   <p className="text-2xl font-black uppercase tracking-[-0.03em]">{founder.name}</p>
                   <p className="mt-2 text-sm font-bold uppercase tracking-[0.16em] text-slate-500">{founder.role}</p>
@@ -82,7 +83,7 @@ const About = () => {
           <div className="rounded-[32px] border border-[#e4e9e5] bg-[#f8faf8] p-6">
             <SectionHeader eyebrow="Our Philosophy" title={aboutPage.philosophy.title} description={aboutPage.philosophy.body} />
             <div className="mt-8 overflow-hidden rounded-[28px]">
-              <img src={aboutPage.philosophy.image} alt="SOSA philosophy training session" className="h-72 w-full object-cover" />
+              <img src={aboutPage.philosophy.image} alt="SOSA philosophy training session" loading="lazy" decoding="async" className="h-72 w-full object-cover" />
             </div>
             <Link
               to={aboutPage.philosophy.button.href}

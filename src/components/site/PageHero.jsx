@@ -1,4 +1,5 @@
 import { ArrowRight, ChevronRight } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const buttonStyles = {
@@ -12,6 +13,7 @@ const PageHero = ({
   subtitle,
   description,
   backgroundImage,
+  backgroundPoster,
   actions = [],
   stats = [],
   highlights = [],
@@ -19,14 +21,48 @@ const PageHero = ({
   compact = false,
 }) => {
   const isVideoBackground = typeof backgroundImage === 'string' && /\.(mp4|webm|ogg)$/i.test(backgroundImage)
+  const [showVideo, setShowVideo] = useState(() => {
+    if (!isVideoBackground || typeof window === 'undefined') {
+      return isVideoBackground
+    }
+
+    return !window.matchMedia('(max-width: 767px), (prefers-reduced-motion: reduce)').matches
+  })
+
+  useEffect(() => {
+    if (!isVideoBackground) {
+      return
+    }
+
+    const mediaQuery = window.matchMedia('(max-width: 767px), (prefers-reduced-motion: reduce)')
+    const updateVideoMode = () => setShowVideo(!mediaQuery.matches)
+    mediaQuery.addEventListener('change', updateVideoMode)
+
+    return () => mediaQuery.removeEventListener('change', updateVideoMode)
+  }, [isVideoBackground])
 
   return (
     <section className={`relative overflow-hidden ${compact ? 'min-h-105' : 'min-h-155'}`}>
       <div className="absolute inset-0">
-        {isVideoBackground ? (
-          <video src={backgroundImage} autoPlay muted loop playsInline className="h-full w-full object-cover" />
+        {isVideoBackground && showVideo ? (
+          <video
+            src={backgroundImage}
+            poster={backgroundPoster}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className="h-full w-full object-cover"
+          />
         ) : (
-          <img src={backgroundImage} alt="" className="h-full w-full object-cover" />
+          <img
+            src={isVideoBackground ? backgroundPoster ?? '/Logo.jpeg' : backgroundImage}
+            alt=""
+            fetchPriority={compact ? 'auto' : 'high'}
+            decoding="async"
+            className="h-full w-full object-cover"
+          />
         )}
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,10,7,0.9)_0%,rgba(4,10,7,0.5)_42%,rgba(4,10,7,0.2)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,202,40,0.24),transparent_25%),linear-gradient(180deg,transparent_45%,rgba(4,10,7,0.58)_100%)]" />

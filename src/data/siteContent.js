@@ -1,34 +1,28 @@
 import academyImg from '../assets/images/home/Academy.jpeg'
 import academy2Img from '../assets/images/home/Academy2.png'
 import bedroomImg from '../assets/images/home/Bedroom.jpeg'
-import comfortImg from '../assets/images/home/Comfort.jpeg'
+import comfortImg from '../assets/images/home/Comfort2.png'
 import ctaImg from '../assets/images/home/CTA.png'
 import facilitiesImg from '../assets/images/home/Facilities.jpeg'
-import greenTurfImg from '../assets/images/home/Green Turf.jpeg'
+import greenTurfImg from '../assets/images/home/Turf.png'
 import groundImg from '../assets/images/home/Ground.jpeg'
 import ground2Img from '../assets/images/home/Ground2.jpeg'
-import ground3Img from '../assets/images/home/Ground3.jpeg'
+import ground3Img from '../assets/images/home/Ground3.png'
 import netsImg from '../assets/images/home/Nets.png'
 import pavilionImg from '../assets/images/home/Pavilion.png'
 import studentsImg from '../assets/images/home/Students.jpeg'
 import students2Img from '../assets/images/home/Students2.jpeg'
 import washroomImg from '../assets/images/home/Washroom.jpeg'
-import yardImg from '../assets/images/home/Yard.jpeg'
+import yardImg from '../assets/images/home/Nets.png'
 import coach1Img from '../assets/images/about/Coach1.jpeg'
 import coach2Img from '../assets/images/about/Coach2.jpeg'
 import aboutVideo from '../assets/videos/About.mp4'
 import groundHeroVideo from '../assets/videos/Ground.mp4'
 import groundShowcaseVideo from '../assets/videos/Ground1.mp4'
+import foodImg from '../assets/images/home/Food.png'
+import { siteMeta } from './siteMeta'
 
-export const siteMeta = {
-  phoneDisplay: '+91 96733 73093',
-  phoneLink: '+919673373093',
-  whatsappLink: '919673373093',
-  email: 'info@sosacricketacademy.com',
-  location: 'Ratnagiri',
-  fullAddress: 'SOSA Cricket Academy, Nachane, Ratnagiri - 415639, Maharashtra',
-  admissionsText: 'Ground Bookings Open | Practice & Tournament Slots Available',
-}
+export { siteMeta }
 
 export const navLinks = [
   { label: 'Home', path: '/' },
@@ -49,7 +43,7 @@ export const socialLinks = [
 export const generatedAssets = {
   homeHero: groundHeroVideo,
   groundHero: groundShowcaseVideo,
-  aboutHero: ground2Img,
+  aboutHero: ground3Img,
   aboutStoryVideo: aboutVideo,
   academyHero: academy2Img,
   facilitiesHero: netsImg,
@@ -180,9 +174,9 @@ export const homePage = {
   facilities: [
     { title: 'Cricket Ground', image: groundImg },
     { title: 'Pavilion Seating', image: pavilionImg },
-    { title: 'Indoor Nets', image: greenTurfImg },
+    { title: 'Green Turf', image: greenTurfImg },
     { title: 'Changing Room', image: bedroomImg },
-    { title: 'Parking Space', image: yardImg },
+    { title: 'Nets practice', image: yardImg },
     { title: 'Washrooms', image: washroomImg },
   ],
   galleryPreview: {
@@ -190,7 +184,7 @@ export const homePage = {
     items: [
       { category: 'Ground', image: groundImg, title: 'Main Ground View' },
       { category: 'Ground', image: ground2Img, title: 'Aerial Ground Look' },
-      { category: 'Practice', image: greenTurfImg, title: 'Indoor Net Support' },
+      { category: 'Practice', image: yardImg, title: 'Indoor Net Support' },
       { category: 'Tournament', image: ground3Img, title: 'Match Atmosphere' },
       { category: 'Ground', image: pavilionImg, title: 'Pavilion Comfort' },
       { category: 'Practice', image: studentsImg, title: 'Team Session Activity' },
@@ -241,7 +235,7 @@ export const groundPage = {
     title: 'A ground experience that feels ready for real cricket.',
     description:
       'SOSA is used more for ground bookings than academy activity. That is why the venue is positioned for teams first: better playing atmosphere, better hosting convenience and better clarity for organizers.',
-    video: generatedAssets.groundHero,
+    video: aboutVideo,
     bullets: [
       'Suitable for team practice, match simulations and tournaments',
       'Convenient for clubs, cricket groups, schools and event organizers',
@@ -408,14 +402,14 @@ export const facilitiesPage = {
     highlights: ['Ground Access', 'Indoor Nets', 'Pavilion Support', 'Player Comfort'],
   },
   facilities: [
-    { id: 'ground', title: 'SOSA Cricket Ground', text: 'Professional venue for practice sessions, matches and tournaments.', image: groundImg },
-    { title: 'Indoor Practice Nets', text: 'Support training and pre-match preparation with indoor net access.', image: greenTurfImg },
+    { id: 'ground', title: 'SOSA Cricket Ground', text: 'Professional venue for practice sessions, matches and tournaments.', image: ground3Img },
+    { title: 'Indoor Practice Nets', text: 'Support training and pre-match preparation with indoor net access.', image: yardImg },
     { title: 'Changing Rooms', text: 'Clean changing areas for players and teams.', image: bedroomImg },
     { title: 'Player Comfort Area', text: 'Space that supports athletes before and after sessions.', image: comfortImg },
     { title: 'Pavilion Seating', text: 'Viewing and sitting area for teams, organizers and spectators.', image: pavilionImg },
-    { title: 'Parking Space', text: 'Convenient access for teams and visitors.', image: yardImg },
+    { title: 'Parking Space', text: 'Convenient access for teams and visitors.', image: groundImg },
     { title: 'Washrooms', text: 'Basic on-site convenience for players and guests.', image: washroomImg },
-    { title: 'Food & Refreshments', text: 'Refreshment support for longer stays and match days.', image: facilitiesImg },
+    { title: 'Food & Refreshments', text: 'Refreshment support for longer stays and match days.', image: foodImg },
   ],
   futureFacilities: [
     'Expanded event hosting support',
@@ -438,7 +432,7 @@ export const galleryPage = {
     { category: 'Ground', title: 'Main Ground View', image: groundImg, className: 'md:col-span-1' },
     { category: 'Ground', title: 'Aerial Ground View', image: ground2Img, className: 'md:col-span-2' },
     { category: 'Facilities', title: 'Pavilion Experience', image: pavilionImg, className: 'md:col-span-1' },
-    { category: 'Practice', title: 'Indoor Net Sessions', image: greenTurfImg, className: 'md:col-span-1' },
+    { category: 'Practice', title: 'Indoor Net Sessions', image: yardImg, className: 'md:col-span-1' },
     { category: 'Tournament', title: 'Match Readiness', image: ground3Img, className: 'md:col-span-2' },
     { category: 'Academy', title: 'Player Development', image: academyImg, className: 'md:col-span-1' },
     { category: 'Practice', title: 'Coaching Session', image: studentsImg, className: 'md:col-span-1' },
@@ -446,7 +440,7 @@ export const galleryPage = {
     { category: 'Facilities', title: 'Player Comfort', image: comfortImg, className: 'md:col-span-2' },
     { category: 'Facilities', title: 'Changing Rooms', image: bedroomImg, className: 'md:col-span-1' },
     { category: 'Facilities', title: 'Washroom Access', image: washroomImg, className: 'md:col-span-1' },
-    { category: 'Facilities', title: 'Parking Space', image: yardImg, className: 'md:col-span-2' },
+    { category: 'Facilities', title: 'Nets Practice', image: yardImg, className: 'md:col-span-2' },
   ],
   stats: [
     { value: '150+', label: 'Ground Bookings' },

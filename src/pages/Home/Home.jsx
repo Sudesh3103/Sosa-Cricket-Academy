@@ -19,6 +19,7 @@ import PageHero from '../../components/site/PageHero'
 import SectionHeader from '../../components/site/SectionHeader'
 import SiteLayout from '../../components/site/SiteLayout'
 import { generatedAssets, homePage, siteMeta } from '../../data/siteContent'
+import { seoPages } from '../../data/seo'
 
 const statIcons = [CalendarDays, Trophy, Users, Landmark]
 
@@ -43,7 +44,7 @@ const Home = () => {
   }, [activeFilter])
 
   return (
-    <SiteLayout>
+    <SiteLayout seo={seoPages.home}>
       <PageHero
         eyebrow={homePage.hero.eyebrow}
         title={
@@ -54,6 +55,7 @@ const Home = () => {
         }
         description={homePage.hero.description}
         backgroundImage={homePage.hero.backgroundImage}
+        backgroundPoster={homePage.showcase.image}
         actions={homePage.hero.actions}
         stats={homePage.hero.highlightStats}
       />
@@ -111,7 +113,7 @@ const Home = () => {
       <section className="bg-[#f3f5f1] py-18 sm:py-22">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:px-8">
           <div className="overflow-hidden rounded-[32px] shadow-[0_28px_80px_rgba(8,21,14,0.12)]">
-            <img src={homePage.showcase.image} alt="SOSA cricket ground aerial view" className="h-full min-h-[360px] w-full object-cover" />
+            <img src={homePage.showcase.image} alt="SOSA cricket ground aerial view" loading="lazy" decoding="async" className="h-full min-h-[360px] w-full object-cover" />
           </div>
 
           <div className="space-y-6">
@@ -190,7 +192,7 @@ const Home = () => {
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-6">
             {homePage.facilities.map((item) => (
               <article key={item.title} className="overflow-hidden rounded-[24px] border border-[#dde3de] bg-white shadow-sm transition hover:-translate-y-1">
-                <img src={item.image} alt={item.title} className="h-28 w-full object-cover" />
+                <img src={item.image} alt={item.title} loading="lazy" decoding="async" className="h-28 w-full object-cover" />
                 <div className="px-4 py-4">
                   <p className="text-sm font-extrabold uppercase tracking-[0.12em] text-[#102216]">{item.title}</p>
                 </div>
@@ -230,7 +232,7 @@ const Home = () => {
               <div className="grid gap-4 sm:grid-cols-2">
                 {galleryItems.slice(0, 4).map((item) => (
                   <div key={`${item.category}-${item.title}`} className="overflow-hidden rounded-[22px] bg-white shadow-sm">
-                    <img src={item.image} alt={item.title} className="h-36 w-full object-cover transition duration-500 hover:scale-105" />
+                    <img src={item.image} alt={item.title} loading="lazy" decoding="async" className="h-36 w-full object-cover transition duration-500 hover:scale-105" />
                     <div className="px-4 py-4">
                       <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#c59d2d]">{item.category}</p>
                       <p className="mt-1 text-sm font-bold text-[#102216]">{item.title}</p>
@@ -310,7 +312,7 @@ const Home = () => {
           </div>
 
           <div className="overflow-hidden rounded-[32px] shadow-sm">
-            <img src={generatedAssets.teamHuddle} alt="SOSA academy preview" className="h-full min-h-[280px] w-full object-cover" />
+            <img src={generatedAssets.teamHuddle} alt="SOSA academy preview" loading="lazy" decoding="async" className="h-full min-h-[280px] w-full object-cover" />
           </div>
         </div>
       </section>

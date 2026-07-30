@@ -6,16 +6,18 @@ import ContactSection from "../../components/contact/ContactSection";
 import LocationSection from "../../components/contact/LocationSection";
 
 import { contactPage, generatedAssets } from "../../data/siteContent";
+import { seoPages } from "../../data/seo";
 
 const Contact = () => {
   return (
-    <SiteLayout>
+    <SiteLayout seo={seoPages.contact}>
       <PageHero
         eyebrow={contactPage.hero.eyebrow}
         title={contactPage.hero.title}
         subtitle={contactPage.hero.subtitle}
         description={contactPage.hero.description}
         backgroundImage={contactPage.hero.backgroundImage}
+        backgroundPoster={generatedAssets.mapCard}
       />
 
       <ContactSection

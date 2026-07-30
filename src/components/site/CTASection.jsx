@@ -22,10 +22,10 @@ const CTASection = ({
       {showSideImages ? (
         <>
           <div className="absolute inset-y-0 left-0 w-1/3 overflow-hidden opacity-80">
-            {leftImage ? <img src={leftImage} alt="" className="h-full w-full object-cover" /> : null}
+            {leftImage ? <img src={leftImage} alt="" loading="lazy" decoding="async" className="h-full w-full object-cover" /> : null}
           </div>
           <div className="absolute inset-y-0 right-0 w-1/3 overflow-hidden opacity-80">
-            {rightImage ? <img src={rightImage} alt="" className="h-full w-full object-cover" /> : null}
+            {rightImage ? <img src={rightImage} alt="" loading="lazy" decoding="async" className="h-full w-full object-cover" /> : null}
           </div>
         </>
       ) : null}

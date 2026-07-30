@@ -1,9 +1,9 @@
 import { useMemo, useState } from 'react'
 import CTASection from '../../components/site/CTASection'
 import PageHero from '../../components/site/PageHero'
-import SectionHeader from '../../components/site/SectionHeader'
 import SiteLayout from '../../components/site/SiteLayout'
 import { galleryPage, generatedAssets } from '../../data/siteContent'
+import { seoPages } from '../../data/seo'
 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState('All')
@@ -17,13 +17,14 @@ const Gallery = () => {
   }, [activeFilter])
 
   return (
-    <SiteLayout>
+    <SiteLayout seo={seoPages.gallery}>
       <PageHero
         eyebrow={galleryPage.hero.eyebrow}
         title={galleryPage.hero.title}
         subtitle={galleryPage.hero.subtitle}
         description={galleryPage.hero.description}
         backgroundImage={galleryPage.hero.backgroundImage}
+        backgroundPoster={galleryPage.items[0].image}
         compact
       />
 
@@ -49,7 +50,7 @@ const Gallery = () => {
                 className={`group overflow-hidden rounded-[24px] ${item.className ?? ''} shadow-[0_18px_40px_rgba(7,18,13,0.08)]`}
               >
                 <div className="relative h-72 overflow-hidden">
-                  <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-108" />
+                  <img src={item.image} alt={item.title} loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-700 group-hover:scale-108" />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_40%,rgba(4,10,7,0.82)_100%)]" />
                   <div className="absolute inset-x-0 bottom-0 p-5">
                     <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-[#ffca28]">{item.category}</p>

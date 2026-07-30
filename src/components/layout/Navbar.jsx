@@ -1,6 +1,6 @@
 import { ArrowRight, Menu, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import BrandLogo from '../site/BrandLogo'
 import { navLinks } from '../../data/siteContent'
 
@@ -8,15 +8,12 @@ const baseNavClass =
   'text-sm font-bold uppercase tracking-[0.14em] transition duration-200 hover:text-[#ffca28]'
 
 const Navbar = () => {
-  const location = useLocation()
   const navRef = useRef(null)
   const [isOpen, setIsOpen] = useState(false)
   const [isSticky, setIsSticky] = useState(false)
   const [headerHeight, setHeaderHeight] = useState(0)
 
-  useEffect(() => {
-    setIsOpen(false)
-  }, [location.pathname, location.hash])
+  const closeMenu = () => setIsOpen(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +21,7 @@ const Navbar = () => {
     }
 
     handleScroll()
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -63,7 +60,7 @@ const Navbar = () => {
 
               if (isHashLink) {
                 return (
-                  <a key={item.label} href={item.path} className={`${baseNavClass} text-white/82`}>
+                  <a key={item.label} href={item.path} onClick={closeMenu} className={`${baseNavClass} text-white/82`}>
                     {item.label}
                   </a>
                 )
@@ -73,6 +70,7 @@ const Navbar = () => {
                 <NavLink
                   key={item.label}
                   to={item.path}
+                  onClick={closeMenu}
                   className={({ isActive }) => `${baseNavClass} ${isActive ? 'text-[#ffca28]' : 'text-white/82'}`}
                 >
                   {item.label}
@@ -84,6 +82,7 @@ const Navbar = () => {
           <div className="hidden items-center gap-3 lg:flex">
             <Link
               to="/ground"
+              onClick={closeMenu}
               className="inline-flex items-center gap-2 rounded-full border border-white/16 bg-white/6 px-4 py-2.5 text-xs font-extrabold uppercase tracking-[0.16em] text-white transition hover:border-[#ffca28]/55"
             >
               Book Ground
@@ -91,6 +90,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/contact"
+              onClick={closeMenu}
               className="inline-flex items-center gap-2 rounded-full bg-[#ffca28] px-4 py-2.5 text-xs font-extrabold uppercase tracking-[0.16em] text-[#08150e] transition hover:bg-[#ffd54f]"
             >
               Enquire Now
@@ -115,20 +115,21 @@ const Navbar = () => {
 
                 if (item.path.includes('#')) {
                   return (
-                    <a key={item.label} href={item.path} className={classes}>
+                    <a key={item.label} href={item.path} onClick={closeMenu} className={classes}>
                       {item.label}
                     </a>
                   )
                 }
 
                 return (
-                  <NavLink key={item.label} to={item.path} className={classes}>
+                  <NavLink key={item.label} to={item.path} onClick={closeMenu} className={classes}>
                     {item.label}
                   </NavLink>
                 )
               })}
               <Link
                 to="/ground"
+                onClick={closeMenu}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#ffca28] px-5 py-3 text-sm font-extrabold uppercase tracking-[0.16em] text-[#08150e]"
               >
                 Book Ground

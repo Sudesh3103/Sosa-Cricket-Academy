@@ -3,10 +3,11 @@ import PageHero from '../../components/site/PageHero'
 import SectionHeader from '../../components/site/SectionHeader'
 import SiteLayout from '../../components/site/SiteLayout'
 import { facilitiesPage, generatedAssets } from '../../data/siteContent'
+import { seoPages } from '../../data/seo'
 
 const Facilities = () => {
   return (
-    <SiteLayout>
+    <SiteLayout seo={seoPages.facilities}>
       <PageHero
         eyebrow={facilitiesPage.hero.eyebrow}
         title={
@@ -16,6 +17,7 @@ const Facilities = () => {
         }
         description={facilitiesPage.hero.description}
         backgroundImage={facilitiesPage.hero.backgroundImage}
+        backgroundPoster={facilitiesPage.facilities[0].image}
         highlights={facilitiesPage.hero.highlights}
         compact
       />
@@ -36,7 +38,7 @@ const Facilities = () => {
                 id={facility.id}
                 className="overflow-hidden rounded-[28px] border border-[#e6ebe7] bg-white shadow-[0_24px_60px_rgba(7,18,13,0.08)] transition hover:-translate-y-1"
               >
-                <img src={facility.image} alt={facility.title} className="h-56 w-full object-cover" />
+                <img src={facility.image} alt={facility.title} loading="lazy" decoding="async" className="h-56 w-full object-cover" />
                 <div className="px-5 py-5">
                   <h3 className="text-2xl font-black uppercase tracking-[-0.03em] text-[#102216]">{facility.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-slate-600">{facility.text}</p>
