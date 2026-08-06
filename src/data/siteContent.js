@@ -24,8 +24,6 @@ import { siteMeta } from './siteMeta'
 
 export { siteMeta }
 
-
-
 export const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'Ground', path: '/ground' },
